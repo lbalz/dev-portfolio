@@ -34,7 +34,9 @@ header {
 
         >div {
 
-            >span {
+            >a {
+                text-decoration: none;
+                color: white;
 
                 &:hover {
                     color: #3DCFB6;
@@ -113,6 +115,11 @@ header {
             background-color: transparent;
             color: #3DCFB680;
             cursor: pointer;
+            transition: color 0.3s;
+
+            &:hover {
+                color: #3DCFB6;
+            }
         }
     }
 
@@ -122,6 +129,11 @@ header {
             background-color: transparent;
             cursor: pointer;
             color: #3DCFB680;
+            transition: color 0.3s;
+
+            &:hover {
+                color: #3DCFB6;
+            }
         }
 
         .slide-toggle-de {
