@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AtfComponent } from './atf.component';
+import { LandingPageComponent } from './landing-page.component';
 
-describe('AtfComponent', () => {
-  let component: AtfComponent;
-  let fixture: ComponentFixture<AtfComponent>;
+describe('LandingPageComponent', () => {
+  let component: LandingPageComponent;
+  let fixture: ComponentFixture<LandingPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AtfComponent]
+      imports: [LandingPageComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(AtfComponent);
+    fixture = TestBed.createComponent(LandingPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

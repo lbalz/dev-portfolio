@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from "../shared/header/header.component";
 
 @Component({
-  selector: 'app-atf',
+  selector: 'app-landing-page',
   standalone: true,
   imports: [HeaderComponent],
-  templateUrl: './atf.component.html',
-  styleUrl: './atf.component.scss'
+  templateUrl: './landing-page.component.html',
+  styleUrl: './landing-page.component.scss'
 })
-export class AtfComponent {
+export class LandingPageComponent {
 
 }

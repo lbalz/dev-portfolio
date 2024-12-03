@@ -1,1 +1,41 @@
-<p>header works!</p>
+<header>
+    <div class="content-wrapper">
+        <div class="menu-wrapper">
+            <div
+            class="slide_toggle_container" 
+            [ngClass]="{'en-selected': isEnglish, 'de-selected': !isEnglish}">
+                <div 
+                class="slide-toggle-en" 
+                [ngClass]="{'active': isEnglish}"
+                (click)="toggleLanguage('EN')">
+                    <span>EN</span>
+                </div>
+                <div 
+                class="slide-toggle-de" 
+                [ngClass]="{'active': !isEnglish}"
+                (click)="toggleLanguage('DE')">
+                    <span>DE</span>
+                </div>
+            </div>
+
+            <nav>
+                <div>
+                    <span>About me</span>
+                </div>
+
+                <div>
+                    <span>Skills</span>
+                </div>
+
+                <div>
+                    <span>Projects</span>
+                </div>
+            </nav>
+
+        </div>
+
+        <div class="logo-wrapper">
+            <img class="logo" src="../../../assets/img/logo_filled.png" alt="logo">
+        </div>
+    </div>
+</header>
