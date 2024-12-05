@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   isEnglish: boolean = true;
+  logoImgSrc: string = './assets/img/logo_filled.png';
 
   toggleLanguage(language: 'EN' | 'DE') {
     this.isEnglish = language === 'EN';

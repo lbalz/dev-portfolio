@@ -36,7 +36,11 @@
 
         <div class="logo-wrapper">
             <a href="#landingPage">
-                <img class="logo" src="../../../assets/img/logo_filled.png" alt="logo">
+                <img 
+                [src]="logoImgSrc" 
+                (mouseover)="logoImgSrc = './assets/img/logo_not_filled.png'"
+                (mouseout)="logoImgSrc = './assets/img/logo_filled.png'"
+                class="logo" src="./assets/img/logo_filled.png" alt="logo">
             </a>
         </div>
     </div>
