@@ -1,3 +1,5 @@
+$primary-color: #3DCFB6;
+
 header {
     width: 100%;
     height: 96px;
@@ -42,7 +44,7 @@ header {
                 color: white;
 
                 &:hover {
-                    color: #3DCFB6;
+                    color: $primary-color;
                 }
             }
         }
@@ -55,7 +57,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #3DCFB6;
+    border: 1px solid $primary-color;
     border-radius: 14px;
 
     &:hover {
@@ -108,10 +110,10 @@ header {
 .slide_toggle_container {
     &.en-selected {
         .slide-toggle-en {
-            background-color: #3DCFB6;
+            background-color: $primary-color;
             color: white;
             cursor: default;
-            border: 1px solid #3DCFB6;
+            border: 1px solid $primary-color;
         }
 
         .slide-toggle-de {
@@ -121,7 +123,7 @@ header {
             transition: color 0.3s;
 
             &:hover {
-                color: #3DCFB6;
+                color: $primary-color;
             }
         }
     }
@@ -135,15 +137,45 @@ header {
             transition: color 0.3s;
 
             &:hover {
-                color: #3DCFB6;
+                color: $primary-color;
             }
         }
 
         .slide-toggle-de {
             width: 44px;
-            background-color: #3DCFB6;
+            background-color: $primary-color;
             color: white;
-            border: 1px solid #3DCFB6;
+            border: 1px solid $primary-color;
         }
     }
+}
+
+nav div a {
+    position: relative;
+    text-decoration: none;
+    clip: #333;
+    font-size: 16px;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+nav div a:hover {
+    color: $primary-color;
+}
+
+nav div a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: $primary-color;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+nav div a:hover::after {
+    opacity: 1;
 }
