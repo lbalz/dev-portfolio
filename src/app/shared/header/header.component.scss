@@ -153,24 +153,16 @@ header {
 nav div a {
     position: relative;
     text-decoration: none;
-    clip: #333;
-    font-size: 16px;
-    display: inline-block;
-    padding: 5px 10px;
-}
-
-nav div a:hover {
-    color: $primary-color;
 }
 
 nav div a::after {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: -10px;
     transform: translateX(-50%);
-    width: 5px;
-    height: 5px;
+    width: 8px;
+    height: 8px;
     background-color: $primary-color;
     border-radius: 50%;
     opacity: 0;
