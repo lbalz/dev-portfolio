@@ -14,6 +14,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-left: 96px;
+    padding-right: 96px;
 }
 
 .left-line-button-container {
@@ -120,12 +122,12 @@ section {
 
 .right-line-buttons-email-container {
     width: 32px;
-    height: 480px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-top: 430px;
+    margin-top: 326px;
     gap: 24px;
 
     .buttons-email-container {
@@ -167,6 +169,27 @@ section {
             gap: 8px;
         }
 
+        .buttons-container a {
+            position: relative;
+        }
+
+        .buttons-container a::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -16px;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background-color: #3DCFB6;
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+        .buttons-container a:hover::after {
+            opacity: 1;
+        }
+
     }
 
     .right-line {
@@ -177,7 +200,48 @@ section {
 }
 
 
+.marquee-container {
+    width: 100%;
+    max-width: 1440px;
+    height: 64px;
+    background-color: #FFFFFF1F;
+    backdrop-filter: blur(5.3px);
+    overflow: clip;
+    position: absolute;
+    bottom: 38px;
+    display: flex;
+    align-items: center;
+    transform: rotate(357deg);
+}
+
+.marquee-content {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    animation: marquee 5s linear infinite;
+    white-space: nowrap;
+    font-family: "Karla-Medium";
+    color: #3DCFB6;
+    font-size: 32px;
+}
+
+.radio-button {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #3DCFB6;
+}
+
 /* Animations */
+
+/* Marquee */
+@keyframes marquee {
+    to {
+        transform: translateX(-50%);
+    }
+}
 
 /* Arrow img */
 @keyframes bounce {
