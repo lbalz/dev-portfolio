@@ -1,5 +1,83 @@
+$primary-color: #3DCFB6;
+$secondary-color: #FFFFFF;
+
 section {
     width: 1440px;
     height: 100vh;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Karla-Regular";
 }
+
+.about-me-wrapper {
+    width: 1200px;
+    height: 720px;
+    display: flex;
+    gap: 120px;
+
+    .image-container {
+        width: 568px;
+        height: 568px;
+        /* mit neuem Bild von mir, muss ausgegraut werden
+            object-fit: cover; etc. evtl? */
+    }
+
+    .about-me-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: left;
+        
+
+
+        .outer-text-container {
+            color: $primary-color;
+        }
+
+        .about-me-container {
+            min-width: 300px;
+            max-width: 568px;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            background: #3DCFB61A;
+            border: 1px solid #3DCFB6;
+            backdrop-filter: blur(4px);
+            border-radius: 30px;
+
+            >div {
+
+                >h3 {
+                    color: $primary-color;
+                    font-size: 64px;
+                }
+            }
+
+            >div {
+
+                >span {
+                    color: $secondary-color;
+                    font-size: 18px;
+                    font-family: "Karla-Light";
+                }
+            }
+
+            >div {
+
+                
+                >div {
+
+                    >span {
+                        color: $secondary-color;
+                        font-size: 18px;
+                        font-family: "Karla-Light";
+                    }
+                }
+            }
+        }
+    }
+}
+
+
