@@ -15,64 +15,108 @@ section {
     height: 720px;
     display: flex;
     gap: 120px;
+    cursor: default;
 
     .image-container {
         width: 568px;
         height: 568px;
         /* mit neuem Bild von mir, muss ausgegraut werden
             object-fit: cover; etc. evtl? */
+
     }
 
-    .about-me-wrapper {
+    
+
+    .text-container {
         display: flex;
         flex-direction: column;
         justify-content: start;
         align-items: left;
-        
-
+        gap: 20px;
+        padding-top: 200px;
 
         .outer-text-container {
             color: $primary-color;
+            font-size: 24px;
         }
 
         .about-me-container {
             min-width: 300px;
             max-width: 568px;
             width: 100%;
-            height: auto;
+            height: 650px;
             display: flex;
             flex-direction: column;
+            justify-content: start;
             background: #3DCFB61A;
             border: 1px solid #3DCFB6;
             backdrop-filter: blur(4px);
             border-radius: 30px;
+            gap: 24px;
+            padding: 24px;
 
-            >div {
+            .about-me-headline-container {
 
-                >h3 {
+                .about-me-headline {
                     color: $primary-color;
-                    font-size: 64px;
+                    font-size: 58px;
                 }
             }
 
-            >div {
+            .about-me-text-content-container {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
 
-                >span {
-                    color: $secondary-color;
-                    font-size: 18px;
-                    font-family: "Karla-Light";
-                }
-            }
+                .about-me-introduction-container {
+                    width: 100%;
+                    height: auto;
+                    text-wrap: wrap;
+                    text-align: justify;
 
-            >div {
-
-                
-                >div {
-
-                    >span {
+                    .about-me-introduction {
                         color: $secondary-color;
-                        font-size: 18px;
+                        font-size: 16px;
                         font-family: "Karla-Light";
+                    }
+                }
+
+                .about-me-informations-container {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+
+                    .work-flexibility-container,
+                    .work-cognition-container,
+                    .work-quality-container {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: start;
+                        gap: 8px;
+                        text-wrap: wrap;
+                        text-align: justify;
+
+                        .information-icon {
+                            width: 28px;
+                            height: 28px;
+                        }
+    
+                        .work-flexibility-text,
+                        .work-cognition-text,
+                        .work-quality-text {
+                            color: #FFFFFFCC;
+                            font-size: 16px;
+                            font-family: "Karla-Light";
+
+                            &:hover {
+                                color: $secondary-color;
+                            }
+                        }
                     }
                 }
             }
