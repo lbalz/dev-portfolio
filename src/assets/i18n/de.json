@@ -1,0 +1,99 @@
+{
+    "app": {
+        "header": {
+            "about_me": "Über mich",
+            "skills": "Fähigkeiten",
+            "projects": "Projekte"
+        },
+        "landing_page": {
+            "fe_dev": "Frontend Entwickler",
+            "check_work": "Meine Projekte",
+            "contact_me": "Schreiben Sie mir",
+            "marquee": {
+                "fe_dev": "Frontend Entwickler",
+                "based": "Heimat Berlin",
+                "open": "Offen für neues",
+                "available": "Verfügbar für Remote-Arbeit"
+            }
+        },
+        "about_me": {
+            "who": "Wer ich bin",
+            "about_me": "Über mich",
+            "about_me_text": "",
+            "work_flexibility": "",
+            "work_cognition": "",
+            "work_quality": ""
+        },
+        "skills": {
+            "technologies": "Technologien",
+            "skill_set": "Fähigkeiten",
+            "skill_text": "",
+            "you_need": "Sie suchen",
+            "another_skill": "andere Fähigkeiten?",
+            "feel_free": "Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein bisheriges Wissen weiter auszubauen.",
+            "lets_talk": "Kontakt",
+            "growth_mindset": "Wachstumsmentalität",
+            "growth_mindset_hover": "Ich habe ein besonderes Interesse am Lernen von"
+        },
+        "portfolio_projects": {
+            "featured_projects": "Ausgewählte Projekte",
+            "explore_work": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+            "overlay": {
+                "info": {
+                    "join_project": "Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+                    "game_project": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen."
+                },
+                "title": "Worum geht es in diesem Projekt?",
+                "next_project": "Nächstes Projekt"
+            }
+        },
+        "references": {
+            "title": "Was meine Kollegen über mich sagen",
+            "team_partner": {
+                "ben": {
+                    "name": "B.Dei - Team Partner",
+                    "reference": "Lukas Balz ist einer auf den man sich verlassen kann, nicht nur dass er sehr wissbegierig und ein unfassbares Know-how hat. hat er auch uns anderen immer mit Rat und Tat beiseite gestanden, wenn wir mal nicht weiter wussten. Ich hoffe sehr, dass ich nochmal das vergnügen habe mit ihm zusammen arbeiten zu dürfen."
+                },
+                "can": {
+                    "name": "C.Oeter - Team Partner",
+                    "reference": "Die Zusammenarbeit mit Lukas war eine absolute Bereicherung. Besonders beim Projekt Join Kanban, an dem wir als Gruppe gearbeitet haben, hat er einen extrem großen Teil zum Erfolg beigetragen. Mit seinem Engagement und Fachwissen glänzte er stets und meisterte auch komplexe Herausforderungen souverän. Lukas ist nicht nur zuverlässig, sondern bringt sich mit voller Leidenschaft in jedes Projekt ein."
+                },
+                "konstantin": {
+                    "name": "K.Stark - Team Partner",
+                    "reference": "Während unserer Zusammenarbeit am Projekt „Kochwelt Website“ (HTML, CSS, JavaScript) überzeugte Lukas Balz durch seine hervorragende Organisation und Führung der Gruppenarbeit. Seine Fähigkeit, das Team von Beginn an zu leiten, zeigte sein ausgeprägtes Organisationstalent. Lukas ist ein motivierter, zuverlässiger und hilfsbereiter Teamplayer. Besonders hervorzuheben sind seine Teamfähigkeit und sein Engagement, mit denen er das gesamte Team unterstützt und motiviert hat. Die Zusammenarbeit mit ihm war durchweg angenehm und produktiv. Aufgrund seiner Stärken empfehle ich Lukas Balz sehr gerne für zukünftige Projekte weiter."
+                }
+            }
+        },
+        "contact_me": {
+            "contact_me": "Schreiben Sie mir",
+            "title": "Lassen Sie uns zusammenarbeiten",
+            "got_problem": "Haben Sie ein Problem zu lösen?",
+            "contact_through_form": "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen zu kennen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+            "need_dev": "Brauchen Sie einen Frontend Entwickler?",
+            "lets_talk": "Kontaktieren sie mich!",
+            "your_name": "Wie lautet Ihr Name?",
+            "your_name_placeholder": "Ihr Name...",
+            "your_email": "Wie lautet Ihre E-Mail?",
+            "your_email_placeholder": "ihreemail@email.com",
+            "how_can_i_help": "Wie kann ich Ihnen helfen?",
+            "how_can_i_help_placeholder": "Hallo Lukas, ich bin interessiert an...",
+            "check_box_first_part": "Ich habe die ",
+            "privacy_policy": "Datenschutzerklärung ",
+            "check_box_second_part": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+            "say_hello": "Sag Hallo ;)"
+        },
+        "imprint": {
+
+        },
+        "legal_notice": {
+
+        },
+        "footer": {
+            "web_dev": "Web Entwickler",
+            "located_in": "Berlin Deutschland",
+            "imprint": "Impressum",
+            "legal_notice": "Rechtshinweis",
+            "privacy_policy": "Datenschutzerklärung"
+        }
+    }
+}

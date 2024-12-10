@@ -22,8 +22,15 @@ section {
         height: 568px;
         /* mit neuem Bild von mir, muss ausgegraut werden
             object-fit: cover; etc. evtl? */
-
+        
+        // &:hover {
+        //     background-image: url("../../../assets/img/about_me_hover.png");
+        //     position: absolute;
+        //     top: 24px;
+        //     left: 24px;
+        // } //! Fix, nur eine grobe idee 
     }
+
 
     
 

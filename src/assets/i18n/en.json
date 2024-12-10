@@ -1,0 +1,99 @@
+{
+    "app": {
+        "header": {
+            "about_me": "About me",
+            "skills": "Skills",
+            "projects": "Projects"
+        },
+        "landing_page": {
+            "fe_dev": "Frontend Developer",
+            "check_work": "Check my work",
+            "contact_me": "Contact me",
+            "marquee": {
+                "fe_dev": "Frontend Developer",
+                "based": "Based in Berlin",
+                "open": "Open to work",
+                "available": "Available for remote work"
+            }
+        },
+        "about_me": {
+            "who": "Who I am",
+            "about_me": "About me",
+            "about_me_text": "",
+            "work_flexibility": "",
+            "work_cognition": "",
+            "work_quality": ""
+        },
+        "skills": {
+            "technologies": "Technologies",
+            "skill_set": "Skill Set",
+            "skill_text": "",
+            "you_need": "You need",
+            "another_skill": "another skill?",
+            "feel_free": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+            "lets_talk": "Let's talk",
+            "growth_mindset": "Growth mindset",
+            "growth_mindset_hover": "I have a special interest in learning"
+        },
+        "portfolio_projects": {
+            "featured_projects": "Featured Projects",
+            "explore_work": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+            "overlay": {
+                "info": {
+                    "join_project": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+                    "game_project": "Jump, run and throw game based on object-oriented approach. Help pepe to find coins and tabasco salsa to fight against the crazy hen."
+                },
+                "title": "What is this project about?",
+                "next_project": "Next project"
+            }
+        },
+        "references": {
+            "title": "What my colleagues say about me",
+            "team_partner": {
+                "ben": {
+                    "name": "B.Dei - Team Partner",
+                    "reference": "Lukas Balz is someone you can rely on, not only because he is very inquisitive and has incredible know-how, but also because he was always on hand with help and advice when we were stuck. I very much hope that I will have the pleasure of working with him again."
+                },
+                "can": {
+                    "name": "C.Oeter - Team Partner",
+                    "reference": "During our collaboration on the “Kochwelt Website” project (HTML, CSS, JavaScript), Lukas Balz impressed us with his excellent organization and leadership of the group work. His ability to lead the team from the beginning showed his strong organizational skills. Lukas is a motivated, reliable and helpful team player. His ability to work in a team and his commitment, with which he supported and motivated the entire team, deserve special mention. Working with him was consistently pleasant and productive. Due to his strengths, I am very happy to recommend Lukas Balz for future projects."
+                },
+                "konstantin": {
+                    "name": "K.Stark - Team Partner",
+                    "reference": "Working with Lukas was an absolute enrichment. He made an extremely large contribution to the success of the Join Kanban project in particular, which we worked on as a group. He always shone with his commitment and expertise and mastered even complex challenges with ease. Lukas is not only reliable, but also brings his full passion to every project."
+                }
+            }
+        },
+        "contact_me": {
+            "contact_me": "Contact me",
+            "title": "Let's work together",
+            "got_problem": "Got a problem to solve?",
+            "contact_through_form": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+            "need_dev": "Need a Frontend Developer?",
+            "lets_talk": "Let's talk!",
+            "your_name": "What's your name?",
+            "your_name_placeholder": "Your name goes here",
+            "your_email": "What's your email?",
+            "your_email_placeholder": "youremail@email.com",
+            "how_can_i_help": "How can I help you?",
+            "how_can_i_help_placeholder": "Hello Lukas, I am interested in...",
+            "check_box_first_part": "I've read the ",
+            "privacy_policy": "privacy policy ",
+            "check_box_second_part": "and agree to the processing of my data as outlined.",
+            "say_hello": "Say Hello ;)"
+        },
+        "imprint": {
+
+        },
+        "legal_notice": {
+
+        },
+        "footer": {
+            "web_dev": "Web Developer",
+            "located_in": "Berlin Germany",
+            "imprint": "Imprint",
+            "legal_notice": "Legal Notice",
+            "privacy_policy": "Privacy Policy"
+        }
+    }
+}

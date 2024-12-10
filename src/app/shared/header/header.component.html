@@ -7,20 +7,20 @@
                 <div 
                 class="slide-toggle-en" 
                 [ngClass]="{'active': isEnglish}"
-                (click)="toggleLanguage('EN')">
+                (click)="translate.switchLanguage('en')">
                     <span>EN</span>
                 </div>
                 <div 
                 class="slide-toggle-de" 
                 [ngClass]="{'active': !isEnglish}"
-                (click)="toggleLanguage('DE')">
+                (click)="translate.switchLanguage('de')">
                     <span>DE</span>
                 </div>
             </div>
 
             <nav>
                 <div>
-                    <a href="#aboutMe">About me</a>
+                    <a href="#aboutMe">About me {{ 'app.header.about_me' | translate }}</a>
                 </div>
 
                 <div>
