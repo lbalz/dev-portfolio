@@ -7,13 +7,13 @@
                 <div 
                 class="slide-toggle-en" 
                 [ngClass]="{'active': isEnglish}"
-                (click)="translate.switchLanguage('en'); toggleLanguageBtnStyle('EN')">
+                (click)="translate.switchLanguage('en'); toggleLanguageBtnStyle('EN'); toggleLanguage()">
                     <span>EN</span>
                 </div>
                 <div 
                 class="slide-toggle-de" 
                 [ngClass]="{'active': !isEnglish}"
-                (click)="translate.switchLanguage('de'); toggleLanguageBtnStyle('DE')">
+                (click)="translate.switchLanguage('de'); toggleLanguageBtnStyle('DE'); toggleLanguage()">
                     <span>DE</span>
                 </div>
             </div>

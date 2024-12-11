@@ -16,14 +16,18 @@ import { TranslateLanguageService } from '../../translate-language.service';
 export class HeaderComponent {
   logoImgSrc: string = './assets/img/logo_filled.png';
 
-
-  translate = inject(TranslateLanguageService);
-
-
-
   isEnglish: boolean = true;
 
   toggleLanguageBtnStyle(language: 'EN' | 'DE') {
     this.isEnglish = language === 'EN';
+  }
+
+  constructor(private languageService: TranslateLanguageService) { }
+
+  translate = inject(TranslateLanguageService);
+
+  toggleLanguage(): void {
+    this.isEnglish = !this.isEnglish;
+    this.languageService.changeIsEnglish(this.isEnglish);
   }
 }

@@ -4,7 +4,7 @@
             <img src="./assets/img/placeholder-image.png" alt="">
         </div>
 
-        <div class="text-container" >
+        <div class="text-container" [ngClass]="{'en-padding': isEnglish, 'de-padding': !isEnglish}">
             <div class="outer-text-container">
                 <span>{{'app.about_me.who' | translate }}</span>
             </div>

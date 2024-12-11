@@ -1,6 +1,14 @@
 $primary-color: #3DCFB6;
 $secondary-color: #FFFFFF;
 
+.en-padding {
+    padding-top: 227px;
+}
+
+.de-padding {
+    padding-top: 150px;
+}
+
 section {
     width: 1440px;
     height: 100vh;
@@ -40,7 +48,6 @@ section {
         justify-content: start;
         align-items: left;
         gap: 20px;
-        padding-top: 150px;
 
         .outer-text-container {
             color: $primary-color;
