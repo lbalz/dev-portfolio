@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LandingPageIconSet } from '../shared/interfaces/landing-page-icon-set.interface';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslateLanguageService } from '../translate-language.service';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
@@ -29,4 +31,6 @@ export class LandingPageComponent {
   currentGithubIcon: string = this.icons.github.normal;
   currentLinkedinIcon: string = this.icons.linkedin.normal;
   currentEmailIcon: string = this.icons.email.normal;
+
+  translate = inject(TranslateLanguageService);
 }

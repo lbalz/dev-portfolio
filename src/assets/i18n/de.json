@@ -19,10 +19,10 @@
         "about_me": {
             "who": "Wer ich bin",
             "about_me": "Über mich",
-            "about_me_text": "",
-            "work_flexibility": "",
-            "work_cognition": "",
-            "work_quality": ""
+            "about_me_text": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Berlin. Motiviert durch die grenzenlosen Möglichkeiten in der IT, bin ich begeistert davon, visuell fesselnde und intuitive Webseiten und Anwendungen zu entwickeln.",
+            "work_flexibility": "Ich bin flexibel, was das Arbeitsumfeld angeht, und kann sowohl vor Ort in Berlin als auch aus der Ferne effektiv arbeiten.",
+            "work_cognition": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um meine Kenntnisse und Fähigkeiten ständig zu verbessern.",
+            "work_quality": "In meinem Beruf geht es beim Programmieren nicht nur um das Schreiben von Code; es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu destillieren. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken."
         },
         "skills": {
             "technologies": "Technologien",

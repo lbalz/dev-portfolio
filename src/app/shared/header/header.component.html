@@ -7,28 +7,28 @@
                 <div 
                 class="slide-toggle-en" 
                 [ngClass]="{'active': isEnglish}"
-                (click)="translate.switchLanguage('en')">
+                (click)="translate.switchLanguage('en'); toggleLanguageBtnStyle('EN')">
                     <span>EN</span>
                 </div>
                 <div 
                 class="slide-toggle-de" 
                 [ngClass]="{'active': !isEnglish}"
-                (click)="translate.switchLanguage('de')">
+                (click)="translate.switchLanguage('de'); toggleLanguageBtnStyle('DE')">
                     <span>DE</span>
                 </div>
             </div>
 
             <nav>
                 <div>
-                    <a href="#aboutMe">About me {{ 'app.header.about_me' | translate }}</a>
+                    <a href="#aboutMe">{{ 'app.header.about_me' | translate }}</a>
                 </div>
 
                 <div>
-                    <a href="#skillSet">Skills</a>
+                    <a href="#skillSet">{{ 'app.header.skills' | translate }}</a>
                 </div>
 
                 <div>
-                    <a href="#portfolioProjects">Projects</a>
+                    <a href="#portfolioProjects">{{ 'app.header.projects' | translate }}</a>
                 </div>
             </nav>
 

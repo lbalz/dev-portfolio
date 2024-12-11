@@ -23,7 +23,7 @@ export class HeaderComponent {
 
   isEnglish: boolean = true;
 
-  toggleLanguage(language: 'EN' | 'DE') {
+  toggleLanguageBtnStyle(language: 'EN' | 'DE') {
     this.isEnglish = language === 'EN';
   }
 }
