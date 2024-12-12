@@ -1,36 +1,39 @@
 <section id="skills">
-    <div class="left-wrapper">
-        <h5 class="small-headline"> {{'app.skills.technologies' | translate}} </h5>
-        <div class="skill-set-container">
-            <h3 class="skill-set-headline"> {{'app.skills.skill_set' | translate}} </h3>
-
-            <div class="">
-                <div>
-                    <span> {{'app.skills.skill_text' | translate}} </span>
-                </div>
-
-                <div>
-                    <div>
-                        <span> {{'app.skills.you_need' | translate}} </span>
-                        <span> {{'app.skills.another_skill' | translate}} </span>
+    <div class="skills-wrapper">
+        <div class="left-wrapper">
+            <h5 class="small-headline"> {{'app.skills.technologies' | translate}} </h5>
+    
+            <div class="skill-set-container">
+                <h3 class="skill-set-headline"> {{'app.skills.skill_set' | translate}} </h3>
+    
+                <div class="skill-set-text-wrapper">
+                    <div class="skill-text-container">
+                        <span class="skill-text"> {{'app.skills.skill_text' | translate}} </span>
                     </div>
-
-                    <span> {{'app.skills.feel_free' | translate}} </span>
+    
+                    <div class="need-skill-wrapper">
+                        <div class="need-skill-container">
+                            <span class="you-need"> {{'app.skills.you_need' | translate}} </span>
+                            <span class="another-skill"> {{'app.skills.another_skill' | translate}} </span>
+                        </div>
+    
+                        <span class="feel-free"> {{'app.skills.feel_free' | translate}} </span>
+                    </div>
                 </div>
 
-                <div>
-                    <a href="#contactMe"> {{'app.skills.lets_talk' | translate}} </a>
+                <div class="lets-talk-container">
+                    <a class="lets-talk" href="#contactMe"> {{'app.skills.lets_talk' | translate}} </a>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="right-wrapper">
-        @for (skillIcon of skillIcons; track $index) {
+    
+        <div class="right-wrapper">
+            @for (skillIcon of skillIcons; track $index) {
             <div>
                 <img src="{{ skillIcon.path }}" alt="">
                 <span> {{ skillIcon.text }} </span>
             </div>
-        }
+            }
+        </div>
     </div>
 </section>
