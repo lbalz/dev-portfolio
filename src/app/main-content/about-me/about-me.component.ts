@@ -13,8 +13,6 @@ import { CommonModule } from '@angular/common';
 export class AboutMeComponent implements OnInit {
   isEnglish: boolean = true;
 
-  translate = inject(TranslateLanguageService);
-
   constructor(private languageService: TranslateLanguageService) { }
 
   ngOnInit(): void {
