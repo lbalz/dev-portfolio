@@ -118,10 +118,10 @@ section {
 
 .right-wrapper {
     width: 640px;
-    height: 420px;
+    height: 320px;
     display: flex;
     flex-wrap: wrap;
-    gap: 72px;
+    gap: 48px;
     padding-top: 64px;
 
     >div {
@@ -129,6 +129,7 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 4px;
 
         >img {
             width: 64px;
@@ -141,6 +142,69 @@ section {
             font-size: 18px;
             text-wrap: wrap;
             text-align: center;
+        }
+
+        &:hover {
+            >img {
+                transform: scale(1.1);
+                transition: transform 0.5s ease;
+            }
+        }
+    }
+
+    .tech-enthusiasm-container {
+        position: relative;
+
+        .tooltip-container {
+            visibility: hidden;
+            opacity: 0;
+            width: 180px;
+            height: 112px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background-color: $secondary-color;
+            position: absolute;
+            bottom: 112px;
+            border-radius: 16px;
+            padding: 4px 12px;
+            text-wrap: wrap;
+            text-align: center;
+
+            >span {
+                font-family: "Karla-Light";
+                color: $primary-color;
+                font-size: 16px;
+            }
+
+            >div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+
+                >div {
+                    display: flex;
+                    flex-direction: column;
+
+                    >img {
+                        width: 32px;
+                        height: 32px;
+                    }
+
+                    >span {
+                        font-size: 12px;
+                        font-weight: bold;
+                        color: $primary-color;
+                    }
+                }
+            }
+
+            &:hover {
+                visibility: visible;
+                opacity: 1;
+                //! Tooltip container styled, hover not working
+            }
         }
     }
 }

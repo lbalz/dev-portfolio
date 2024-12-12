@@ -22,9 +22,8 @@ export class SkillSetComponent {
     { text: 'GIT', path: './assets/icon/skills/git.png'},
     { text: 'Rest-Api', path: './assets/icon/skills/rest-api.png'},
     { text: 'Scrum', path: './assets/icon/skills/scrum.png'},
-    { text: 'Tech Enthusiasm', path: './assets/icon/skills/tech-enthusiasm.png'},
   ];
-  
+
   isEnglish: boolean = true;
 
   constructor(private languageService: TranslateLanguageService) { }
