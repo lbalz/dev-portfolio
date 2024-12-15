@@ -155,8 +155,16 @@ section {
     .tech-enthusiasm-container {
         position: relative;
 
+        &:hover >span {
+            transition: color 0.3s ease;
+            color: $primary-color;
+        }
+
+        &:hover .tooltip-container {
+            opacity: 1;
+        }
+
         .tooltip-container {
-            visibility: hidden;
             opacity: 0;
             width: 180px;
             height: 112px;
@@ -170,6 +178,7 @@ section {
             padding: 4px 12px;
             text-wrap: wrap;
             text-align: center;
+            transition: opacity 0.3s ease-in;
 
             >span {
                 font-family: "Karla-Light";
@@ -199,15 +208,11 @@ section {
                     }
                 }
             }
-
-            &:hover {
-                visibility: visible;
-                opacity: 1;
-                //! Tooltip container styled, hover not working
-            }
         }
     }
 }
+
+
 
 /* Animations */
 /* Let's Talk button */
