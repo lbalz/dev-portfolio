@@ -13,7 +13,18 @@
                 @for (project of portfolioProjects; track $index) {
 
                     <div class="single-project">
-                        <h4 class="project-title"> {{ project.projectName }} </h4>
+                        <div class="title-container">
+                            <h4 class="project-title"> {{ project.projectName }} </h4>
+                            <img class="arrow"
+                            [src]="'./assets/icon/projects_arrow.png'"
+                            (mouseover)="hoverArrowDNone = 'display: flex'"
+                            >
+                            <!--! onclick auf project container für overlay -->
+                            <!--! container nochmal umbauen, kein left/right wrapper 
+                            <!--! sondern einen großen container wo auf hover dann rechts
+                            <!--! die bilder angezeigt werden! -->
+                        </div>
+                        
                         <div class="stack">
                             @for (stack of project.techStack; track $index) {
                                 <span> {{ stack }} </span>

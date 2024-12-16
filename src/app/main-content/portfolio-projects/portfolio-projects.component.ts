@@ -14,12 +14,12 @@ export class PortfolioProjectsComponent {
   portfolioProjects: PortfolioProject[] = [
     {
       projectName: 'Join',
-      projectImgPath: './assets/img/projects/join.png',
+      projectImgPath: './assets/img/portfolio-projects/join.png',
       techStack: ['HTML', 'CSS', 'JavaScript', 'Firebase']
     },
     {
       projectName: 'El Pollo Loco',
-      projectImgPath: './assets/img/projects/el_pollo_loco.png',
+      projectImgPath: './assets/img/portfolio-projects/el_pollo_loco.png',
       techStack: ['HTML', 'CSS', 'JavaScript']
     },
     // {
@@ -29,7 +29,12 @@ export class PortfolioProjectsComponent {
     // }
   ];
 
+  hoverArrowDNone: string = 'display: none';
 
+
+
+
+  // Translation Service
   isEnglish: boolean = true;
 
   constructor(private languageService: TranslateLanguageService) { }

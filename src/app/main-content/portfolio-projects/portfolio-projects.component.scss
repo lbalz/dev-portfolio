@@ -56,6 +56,7 @@ section {
     .projects {
         width: 100%;
         height: auto;
+        border-bottom: 1px solid $primary-color;
 
         .single-project {
             width: 880px;
@@ -63,11 +64,30 @@ section {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            cursor: pointer;
+            border-top: 1px solid $primary-color;
 
-            .project-title {
-                font-family: "FiraCode-Regular";
-                font-size: 24px;
-                color: $secondary-color;
+            &:hover {
+                background-color: #3DCFB64D;
+                ;
+            }
+
+            .title-container {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                .project-title {
+                    font-family: "FiraCode-Regular";
+                    font-size: 24px;
+                    color: $secondary-color;
+                }
+
+                .arrow {
+                    width: 24px;
+                    height: 24px;
+                    display: none;
+                }
             }
 
             .stack {
