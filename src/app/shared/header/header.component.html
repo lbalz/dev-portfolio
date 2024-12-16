@@ -5,16 +5,16 @@
             class="slide_toggle_container" 
             [ngClass]="{'en-selected': !isEnglish, 'de-selected': isEnglish}">
                 <div 
-                class="slide-toggle-en" 
-                [ngClass]="{'active': !isEnglish}"
-                (click)="translate.switchLanguage('en'); toggleLanguageBtnStyle('EN'); toggleLanguage()">
-                    <span>EN</span>
-                </div>
-                <div 
                 class="slide-toggle-de" 
                 [ngClass]="{'active': isEnglish}"
                 (click)="translate.switchLanguage('de'); toggleLanguageBtnStyle('DE'); toggleLanguage()">
                     <span>DE</span>
+                </div>
+                <div 
+                class="slide-toggle-en" 
+                [ngClass]="{'active': !isEnglish}"
+                (click)="translate.switchLanguage('en'); toggleLanguageBtnStyle('EN'); toggleLanguage()">
+                    <span>EN</span>
                 </div>
             </div>
 

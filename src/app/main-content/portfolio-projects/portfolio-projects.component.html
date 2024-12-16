@@ -5,16 +5,27 @@
                 <h5>Portfolio</h5>
 
                 <h3> {{'app.portfolio_projects.featured_projects' | translate}} </h3>
-
-                <span> {{'app.portfolio_projects.explore_work' | translate}} </span>
             </div>
 
+            <span class="explore_work"> {{'app.portfolio_projects.explore_work' | translate}} </span>
+
             <div class="projects">
-                <div>
-                    <h4>Join</h4>
-                    <span>Javascript | HTML | CSS | Firebase</span>
-                </div>
+                @for (project of portfolioProjects; track $index) {
+
+                    <div class="single-project">
+                        <h4 class="project-title"> {{ project.projectName }} </h4>
+                        <div class="stack">
+                            @for (stack of project.techStack; track $index) {
+                                <span> {{ stack }} </span>
+                                <span> | </span>
+                            }
+                        </div>
+                    </div>
+
+                }
+                
             </div>
         </div>
     </div>
 </section>
+

@@ -16,7 +16,7 @@ import { TranslateLanguageService } from '../../translate-language.service';
 export class HeaderComponent {
   logoImgSrc: string = './assets/img/logo_filled.png';
 
-  isEnglish: boolean = true;
+  isEnglish: boolean = false;
 
   toggleLanguageBtnStyle(language: 'EN' | 'DE') {
     this.isEnglish = language === 'EN';

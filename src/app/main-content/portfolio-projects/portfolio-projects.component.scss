@@ -1,0 +1,80 @@
+$primary-color: #3DCFB6;
+$secondary-color: #FFFFFF;
+
+section {
+    width: 1440px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Karla-Regular";
+
+    .projects-wrapper {
+        width: 1200px;
+        height: 100%;
+        display: flex;
+        gap: 48px;
+        cursor: default;
+    }
+}
+
+.left-wrapper {
+    width: 880px;
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+
+    .headings {
+        width: auto;
+        height: 112px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 9px;
+
+        >h5 {
+            font-size: 24px;
+            color: $primary-color;
+        }
+
+        >h3 {
+            font-size: 64px;
+            color: $primary-color;
+        }
+    }
+
+    .explore_work {
+        font-family: "Karla-Light";
+        font-size: 18px;
+        color: $secondary-color;
+        width: 456px;
+    }
+
+    .projects {
+        width: 100%;
+        height: auto;
+
+        .single-project {
+            width: 880px;
+            height: 104px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .project-title {
+                font-family: "FiraCode-Regular";
+                font-size: 24px;
+                color: $secondary-color;
+            }
+
+            .stack {
+                font-family: "Karla-Light";
+                font-size: 18px;
+                color: $secondary-color;
+            }
+        }
+    }
+}
