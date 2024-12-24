@@ -17,8 +17,6 @@ import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-transl
     FooterComponent, 
     LandingPageComponent, 
     MainContentComponent,
-    TranslatePipe,
-    TranslateDirective,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

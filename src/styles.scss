@@ -24,3 +24,18 @@ html, body {
 ::-webkit-scrollbar-track {
     background: #1C1C1C;
 }
+
+:root {
+    --mouse-x: 0px;
+    --mouse-y: 0px;
+}
+
+.cursor-shadow {
+    width: 50px;
+    height: 50px;
+    background-color: #3DCFB680;
+    position: absolute;
+    left: var(--mouse-x);
+    top: var(--mouse-y);
+    backdrop-filter: blur(90px)
+}
