@@ -15,17 +15,19 @@
             <div class="projects">
                 @for (project of portfolioProjects; track $index) {
 
-                    <div class="single-project">
+                    <div class="single-project"
+                        (mouseover)="onProjectHover(project.projectName); toggleArrow(true)"
+                        (mouseout)="onProjectHover(null); toggleArrow(false)"
+                        (click)="toggleOverlay(true)">
+                        
                         <div class="title-container">
                             <h4 class="project-title"> {{ project.projectName }} </h4>
                             <img class="arrow"
-                            [src]="'./assets/icon/projects_arrow.png'"
-                            (mouseover)="hoverArrowDNone = 'display: flex'"
-                            >
-                            <!--! onclick auf project container für overlay -->
-                            <!--! container nochmal umbauen, kein left/right wrapper 
-                            <!--! sondern einen großen container wo auf hover dann rechts
-                            <!--! die bilder angezeigt werden! -->
+                            src="./assets/icon/projects_arrow.png"
+                            [ngStyle]="{'display': showArrow == true ? 'block':'none'}">
+                            
+                            <!--! Beim hovern werden beide arrows angezeigt -->
+                            <!--! Overlay ist auch nicht richtig -->
                         </div>
                         
                         <div class="stack">
@@ -40,13 +42,32 @@
 
         <div class="right-wrapper">
             <div class="join-img-container">
-                <img class="join-img" src="./assets/img/portfolio-projects/join_placeholder.jpg" alt="">
+                <img class="join-img" 
+                    [ngStyle]="{'display': currentHoveredProject === 'Join' ? 'block' : 'none'}"
+                    src="./assets/img/portfolio-projects/join_placeholder.jpg" 
+                    alt="">
+                <img class="join-img-background" 
+                    [ngStyle]="{'display': currentHoveredProject === 'Join' ? 'block' : 'none'}"
+                    src="./assets/img/about_me_hover.png" 
+                    alt="">
             </div>
 
             <div class="pollo-loco-img-container">
-                <img class="pollo-loco-img" src="./assets/img/portfolio-projects/pollo_loco_placeholder.jpg" alt="">
+                <img class="pollo-loco-img" 
+                    [ngStyle]="{'display': currentHoveredProject === 'El Pollo Loco' ? 'block' : 'none'}"
+                    src="./assets/img/portfolio-projects/pollo_loco_placeholder.jpg" 
+                    alt="">
+                <img class="pollo-loco-img-background" 
+                    [ngStyle]="{'display': currentHoveredProject === 'El Pollo Loco' ? 'block' : 'none'}"
+                    src="./assets/img/about_me_hover.png" 
+                    alt="">
             </div>
         </div>
     </div>
+
+    <div class="portfolio-projects-overlay"
+    [ngStyle]="{'display': showOverlay == true ? 'flex':'none'}">
+
+</div>
 </section>
 

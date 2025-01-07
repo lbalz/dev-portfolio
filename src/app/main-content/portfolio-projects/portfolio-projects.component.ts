@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { TranslateLanguageService } from '../../translate-language.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { PortfolioProject } from '../../shared/interfaces/portfolio-project.interface';
+import { CommonModule, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-portfolio-projects',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, NgStyle, CommonModule],
   templateUrl: './portfolio-projects.component.html',
   styleUrl: './portfolio-projects.component.scss'
 })
@@ -31,11 +32,29 @@ export class PortfolioProjectsComponent {
     // }
   ];
 
-  hoverArrowDNone: string = 'display: none';
+
+    currentHoveredProject: string | null = null;
+    showOverlay: boolean = false;
+    showArrow: boolean = false;
+
+    onProjectHover(projectName: string | null) {
+      this.currentHoveredProject = projectName;
+    }
+
+    toggleOverlay(isVisible: boolean) {
+      this.showOverlay = isVisible;
+    }
+
+    toggleArrow(isVisible: boolean) {
+      this.showArrow = isVisible;
+    }
+
+
 
   formatTechStackString(techStack: string[]): string {
     return techStack.join(`<span style="color: red;"> | </span>`);
   }
+
 
 
 
