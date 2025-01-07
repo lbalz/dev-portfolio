@@ -1,0 +1,79 @@
+$primary-color: #3DCFB6;
+$secondary-color: #FFFFFF;
+
+section {
+    width: 1440px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contact-wrapper {
+        width: 1248px;
+        height: 560px;
+
+        .left-wrapper {
+            width: 560px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .title-container {
+                width: 560px;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 20px;
+
+                .title-contact-me {
+                    font-size: 24px;
+                    color: $primary-color;
+                    font-family: "Karla-Light";
+                }
+
+                .title-work-together {
+                    font-size: 64px;
+                    color: $primary-color;
+                    font-family: "FiraCode-Bold";
+                    font-weight: bold;
+                }
+            }
+
+            .got-a-problem-container {
+                width: 560px;
+                height: 120px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .got-a-problem {
+                    font-size: 24px;
+                    color: $primary-color;
+                    font-family: "FiraCode-Bold";
+                }
+
+                .contact-through-form, .need-dev, .lets-talk {
+                    font-size: 16px;
+                    color: $secondary-color;
+                    font-family: "Karla-Light";
+                }
+
+                .contact-through-form {
+                    text-align: justify;
+                }
+
+                .need-dev-container {
+
+
+                    .lets-talk {
+                        color: $primary-color;
+                        font-weight: bold;
+                        font-family: "Karla-Regular";
+                    }
+                }
+            }
+        }
+    }
+}
