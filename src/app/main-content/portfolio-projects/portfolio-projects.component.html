@@ -26,10 +26,7 @@
                         </div>
                         
                         <div class="stack">
-                            @for (stack of project.techStack; track $index) {
-                                <span> {{ stack }} </span>
-                                <span> | </span>
-                            }
+                            <span [innerHTML]="formatTechStackString(project.techStack)"></span>
                         </div>
                     </div>
 

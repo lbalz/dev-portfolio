@@ -15,12 +15,14 @@ export class PortfolioProjectsComponent {
     {
       projectName: 'Join',
       projectImgPath: './assets/img/portfolio-projects/join.png',
-      techStack: ['HTML', 'CSS', 'JavaScript', 'Firebase']
+      techStack: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
+      techStackString: ""
     },
     {
       projectName: 'El Pollo Loco',
       projectImgPath: './assets/img/portfolio-projects/el_pollo_loco.png',
-      techStack: ['HTML', 'CSS', 'JavaScript']
+      techStack: ['HTML', 'CSS', 'JavaScript'],
+      techStackString: ""
     },
     // {
     //   projectName: 'DABubble',
@@ -31,13 +33,19 @@ export class PortfolioProjectsComponent {
 
   hoverArrowDNone: string = 'display: none';
 
+  formatTechStackString(techStack: string[]): string {
+    return techStack.join(`<span style="color: red;"> | </span>`);
+  }
 
 
 
   // Translation Service
   isEnglish: boolean = true;
 
-  constructor(private languageService: TranslateLanguageService) { }
+  constructor(private languageService: TranslateLanguageService) { 
+    this.portfolioProjects[0].techStackString = this.portfolioProjects[0].techStack.join(`<span style="color: red;"> | </span>`);
+    this.portfolioProjects[1].techStackString = this.portfolioProjects[1].techStack.join(`<span style="color: #3DCFB6;"> | </span>`);
+  }
 
   translate = inject(TranslateLanguageService);
 

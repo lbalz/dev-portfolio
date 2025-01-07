@@ -30,12 +30,17 @@ html, body {
     --mouse-y: 0px;
 }
 
-.cursor-shadow {
-    width: 50px;
-    height: 50px;
-    background-color: #3DCFB680;
-    position: absolute;
-    left: var(--mouse-x);
-    top: var(--mouse-y);
-    backdrop-filter: blur(90px)
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--cursor-x, 50%) var(--cursor-y, 50%), #3dcfb6, transparent 13%);
+    pointer-events: none;
+    mix-blend-mode: screen;
+    will-change: background-position;
+    opacity: 0.15;
+    z-index: 1001;
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
@@ -22,6 +22,13 @@ import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-transl
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent): void {
+    document.body.style.setProperty('--cursor-x', `${event.clientX}px`);
+    document.body.style.setProperty('--cursor-y', `${event.clientY}px`);
+  }
+
+
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
