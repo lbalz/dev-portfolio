@@ -103,6 +103,11 @@ section {
                     
                     
                     >a {
+                        width: 180px;
+                        height: 48px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         color: #3DCFB6;
                         position: relative;
                         animation: slide-out-in 2.5s infinite;
