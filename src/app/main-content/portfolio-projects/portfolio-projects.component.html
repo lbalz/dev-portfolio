@@ -1,13 +1,16 @@
 <section id="portfolioProjects">
     <div class="projects-wrapper">
         <div class="left-wrapper">
-            <div class="headings">
-                <h5>Portfolio</h5>
-
-                <h3> {{'app.portfolio_projects.featured_projects' | translate}} </h3>
+            <div class="info">
+                <div class="headings">
+                    <h5>Portfolio</h5>
+    
+                    <h3> {{'app.portfolio_projects.featured_projects' | translate}} </h3>
+                </div>
+    
+                <span class="explore_work"> {{'app.portfolio_projects.explore_work' | translate}} </span>
+    
             </div>
-
-            <span class="explore_work"> {{'app.portfolio_projects.explore_work' | translate}} </span>
 
             <div class="projects">
                 @for (project of portfolioProjects; track $index) {
@@ -32,6 +35,16 @@
 
                 }
                 
+            </div>
+        </div>
+
+        <div class="right-wrapper">
+            <div class="join-img-container">
+                <img class="join-img" src="./assets/img/portfolio-projects/join_placeholder.jpg" alt="">
+            </div>
+
+            <div class="pollo-loco-img-container">
+                <img class="pollo-loco-img" src="./assets/img/portfolio-projects/pollo_loco_placeholder.jpg" alt="">
             </div>
         </div>
     </div>

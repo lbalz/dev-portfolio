@@ -30,31 +30,36 @@ section {
     gap: 32px;
 
 
-    .headings {
-        width: auto;
-        height: 112px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        gap: 9px;
+    .info {
+        width: 100%;
+        height: auto;
 
-        >h5 {
-            font-size: 24px;
-            color: $primary-color;
+        .headings {
+            width: auto;
+            height: 112px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 9px;
+    
+            >h5 {
+                font-size: 24px;
+                color: $primary-color;
+            }
+    
+            >h3 {
+                font-size: 64px;
+                color: $primary-color;
+            }
         }
-
-        >h3 {
-            font-size: 64px;
-            color: $primary-color;
+    
+        .explore_work {
+            font-family: "Karla-Light";
+            font-size: 18px;
+            color: $secondary-color;
+            width: 456px;
         }
-    }
-
-    .explore_work {
-        font-family: "Karla-Light";
-        font-size: 18px;
-        color: $secondary-color;
-        width: 456px;
     }
 
     .projects {
@@ -100,6 +105,28 @@ section {
                 font-size: 18px;
                 color: $secondary-color;
             }
+        }
+    }
+}
+
+.right-wrapper {
+    width: 320px;
+
+    .join-img-container {
+
+
+        .join-img {
+            width: 200px;
+            height: auto;
+        }
+    }
+
+    .pollo-loco-img-container {
+
+
+        .pollo-loco-img {
+            width: 200px;
+            height: auto;
         }
     }
 }
