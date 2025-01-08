@@ -66,8 +66,32 @@
     </div>
 
     <div class="portfolio-projects-overlay"
-    [ngStyle]="{'display': showOverlay == true ? 'flex':'none'}">
+        [ngStyle]="{'display': showOverlay == true ? 'flex':'none'}"
+        (click)="toggleOverlay(false)">
 
-</div>
+        <div class="single-project-overlay-wrapper"
+            (click)="$event.stopPropagation()">
+
+            <div class="single-project-overlay-container">
+                <div class="close-overlay">
+
+                </div>
+
+                <div class="single project">
+                    <div class="project-info">
+
+                    </div>
+    
+                    <div class="project-img">
+                        
+                    </div>
+                </div>
+
+                <div class="next-project">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
