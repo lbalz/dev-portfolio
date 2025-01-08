@@ -16,15 +16,17 @@
                 @for (project of portfolioProjects; track $index) {
 
                     <div class="single-project"
-                        (mouseover)="onProjectHover(project.projectName); toggleArrow(true)"
-                        (mouseout)="onProjectHover(null); toggleArrow(false)"
+                        (mouseover)="onProjectHover(project.projectName)"
+                        (mouseout)="onProjectHover(null)"
                         (click)="toggleOverlay(true)">
                         
                         <div class="title-container">
                             <h4 class="project-title"> {{ project.projectName }} </h4>
-                            <img class="arrow"
-                            src="./assets/icon/projects_arrow.png"
-                            [ngStyle]="{'display': showArrow == true ? 'block':'none'}">
+                            
+                            @if(currentHoveredProject === project.projectName) {
+                                <img class="arrow"
+                                src="./assets/icon/projects_arrow.png">
+                            }
                             
                             <!--! Beim hovern werden beide arrows angezeigt -->
                             <!--! Overlay ist auch nicht richtig -->

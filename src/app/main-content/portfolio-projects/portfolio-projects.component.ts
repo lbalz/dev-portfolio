@@ -35,7 +35,7 @@ export class PortfolioProjectsComponent {
 
     currentHoveredProject: string | null = null;
     showOverlay: boolean = false;
-    showArrow: boolean = false;
+    // showArrow: boolean = false;
 
     onProjectHover(projectName: string | null) {
       this.currentHoveredProject = projectName;
@@ -45,9 +45,9 @@ export class PortfolioProjectsComponent {
       this.showOverlay = isVisible;
     }
 
-    toggleArrow(isVisible: boolean) {
-      this.showArrow = isVisible;
-    }
+    // toggleArrow(isVisible: boolean) {
+    //   this.showArrow = isVisible;
+    // }
 
 
 
