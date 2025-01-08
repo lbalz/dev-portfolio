@@ -37,7 +37,11 @@ body::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at var(--cursor-x, 50%) var(--cursor-y, 50%), #3dcfb6, transparent 13%);
+    background: radial-gradient(
+        circle 100px at var(--cursor-x, 50%) var(--cursor-y, 50%),
+        #3dcfb6,
+        transparent
+    );
     pointer-events: none;
     mix-blend-mode: screen;
     will-change: background-position;
