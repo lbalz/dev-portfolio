@@ -15,9 +15,30 @@
             </div>
         </div>
         <div class="right-wrapper">
-            <!--! Erst ins ticket schauen und die Dinge bearbeiten -->
-            <!--! Dann erst die Videos über Domain kaufen anschauen -->
-            <!--! Dann HTML Form Videos anschauen und nicht selber coden! -->
+            <div class="contact-form-container">
+                <form (ngSubmit)="sendMail()">
+                    <!-- <div class="line"></div> -->
+                    <label for="name">
+                        {{'app.contact_me.your_name' | translate}}
+                        <span><!--! In der Language json muss noch für die required text was hinzugefügt werden --></span>
+                    </label>
+                    <input type="text" name="name">
+
+                    <!-- <div class="line"></div> -->
+                    <label for="email">
+                        {{'app.contact_me.your_name' | translate}}
+                        <span><!--! In der Language json muss noch für die required text was hinzugefügt werden --></span>
+                    </label>
+                    <input type="text" name="email">
+
+                    <!-- <div class="line"></div> -->
+                    <label for="message">
+                        {{'app.contact_me.your_name' | translate}}
+                        <span><!--! In der Language json muss noch für die required text was hinzugefügt werden --></span>
+                    </label>
+                    <input type="textarea" name="message">
+                </form>
+            </div>
         </div>
     </div>
 </section>
