@@ -20,21 +20,27 @@
                     <!-- <div class="line"></div> -->
                     <label for="name">
                         {{'app.contact_me.your_name' | translate}}
-                        <span><!--! In der Language json muss noch für die required text was hinzugefügt werden --></span>
+                        <span style="display: none;">
+                            {{'app.contact_me.your_name_required' | translate}}
+                        </span>
                     </label>
                     <input type="text" name="name">
 
                     <!-- <div class="line"></div> -->
                     <label for="email">
-                        {{'app.contact_me.your_name' | translate}}
-                        <span><!--! In der Language json muss noch für die required text was hinzugefügt werden --></span>
+                        {{'app.contact_me.your_email' | translate}}
+                        <span style="display: none;">
+                            {{'app.contact_me.your_email_required' | translate}}
+                        </span>
                     </label>
                     <input type="text" name="email">
 
                     <!-- <div class="line"></div> -->
                     <label for="message">
-                        {{'app.contact_me.your_name' | translate}}
-                        <span><!--! In der Language json muss noch für die required text was hinzugefügt werden --></span>
+                        {{'app.contact_me.how_can_i_help' | translate}}
+                        <span style="display: none;">
+                            {{'app.contact_me.how_can_i_help_required' | translate}}
+                        </span>
                     </label>
                     <input type="textarea" name="message">
                 </form>
