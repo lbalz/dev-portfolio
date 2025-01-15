@@ -52,12 +52,24 @@
 
                     <div class="contact-form-bottom-wrapper">
                         <div class="privacy-policy-container">
-                            <input class="privacy-policy-checkbox" type="checkbox" name="" id="">
-                            <div class="text-container">
-                                <span class="privacy-policy-text"> {{'app.contact_me.check_box_first_part' | translate}} </span>
-                                <span class="privacy-policy"> {{'app.contact_me.privacy_policy' | translate}} </span>
-                                <span class="privacy-policy-text"> {{'app.contact_me.check_box_second_part' | translate}} </span>
+                            <div class="check-privacy-policy-container">
+                                <div class="checkbox-container">
+                                    <img
+                                    [src]="checkboxImg"
+                                    (mouseover)="checkboxMouseOver()"
+                                    (mouseleave)="checkboxMouseLeave()"
+                                    (click)="toggleCheckbox()">
+                                    <input class="privacy-policy-checkbox" type="checkbox" name="" id="">
+                                </div>
+                                <div class="text-container">
+                                    <span class="privacy-policy-text"> {{'app.contact_me.check_box_first_part' | translate}} </span>
+                                    <span class="privacy-policy"> {{'app.contact_me.privacy_policy' | translate}} </span>
+                                    <span class="privacy-policy-text"> {{'app.contact_me.check_box_second_part' | translate}} </span>
+                                </div>
                             </div>
+                            <span class="privacy-policy-required">
+                                {{'app.contact_me.privacy_policy_required' | translate}}
+                            </span>
                         </div>
                     </div>
                 </form>

@@ -161,26 +161,41 @@ section {
 
                         .privacy-policy-container {
                             display: flex;
-                            gap: 8px;
+                            flex-direction: column;
 
-                            .privacy-policy-checkbox {
-
-                            }
-
-                            .text-container {
+                            .check-privacy-policy-container {
                                 display: flex;
-                                gap: 4px;
+                                align-items: center;
+                                gap: 8px;
 
-                                .privacy-policy-text {
-                                    font-family: "Karla-Light";
-                                    font-size: 15px;
-                                    color: $secondary-color;
+                                .checkbox-container {
+                                    display: flex;
+                                    align-items: center;
+
+                                    .privacy-policy-checkbox {
+                                        width: 0;
+                                        height: 0;
+                                        opacity: 0;
+                                    }
                                 }
-
-                                .privacy-policy {
-                                    font-family: "FiraCode-Light";
-                                    font-size: 15px;
-                                    color: $primary-color;
+                                
+    
+                                .text-container {
+                                    display: flex;
+                                    gap: 4px;
+                                    width: auto;
+    
+                                    .privacy-policy-text {
+                                        font-family: "Karla-Light";
+                                        font-size: 15px;
+                                        color: $secondary-color;
+                                    }
+    
+                                    .privacy-policy {
+                                        font-family: "FiraCode-Light";
+                                        font-size: 15px;
+                                        color: $primary-color;
+                                    }
                                 }
                             }
                         }

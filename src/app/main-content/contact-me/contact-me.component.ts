@@ -12,6 +12,35 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './contact-me.component.scss'
 })
 export class ContactMeComponent {
+  checkboxImg: string = './assets/icon/checkbox_default.png';
+  checkboxClicked: boolean = false;
+
+
+  checkboxMouseOver() {
+    if (this.checkboxClicked) {
+      this.checkboxImg = './assets/icon/checkbox_checked_hover.png';
+    } else {
+      this.checkboxImg = './assets/icon/checkbox_default_hover.png';
+    }
+  }
+
+  checkboxMouseLeave() {
+    if (this.checkboxClicked) {
+      this.checkboxImg = './assets/icon/checkbox_checked.png';
+    } else {
+      this.checkboxImg = './assets/icon/checkbox_default.png';
+    }
+  }
+
+  toggleCheckbox() {
+    this.checkboxClicked = !this.checkboxClicked;
+
+    if (this.checkboxClicked) {
+      this.checkboxImg = './assets/icon/checkbox_checked_hover.png';
+    } else {
+      this.checkboxImg = './assets/icon/checkbox_default_hover.png';
+    }
+  }
 
   sendMail() {
     
