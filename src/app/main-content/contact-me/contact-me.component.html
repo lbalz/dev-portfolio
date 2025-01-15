@@ -17,32 +17,49 @@
         <div class="right-wrapper">
             <div class="contact-form-container">
                 <form (ngSubmit)="sendMail()">
-                    <!-- <div class="line"></div> -->
-                    <label for="name">
-                        {{'app.contact_me.your_name' | translate}}
-                        <span style="display: none;">
-                            {{'app.contact_me.your_name_required' | translate}}
-                        </span>
-                    </label>
-                    <input type="text" name="name">
+                    <div class="contact-form-top-wrapper">
 
-                    <!-- <div class="line"></div> -->
-                    <label for="email">
-                        {{'app.contact_me.your_email' | translate}}
-                        <span style="display: none;">
-                            {{'app.contact_me.your_email_required' | translate}}
-                        </span>
-                    </label>
-                    <input type="text" name="email">
+                        <div class="your-name-container">
+                            <label class="your-name" for="name">
+                                {{'app.contact_me.your_name' | translate}}
+                            </label>
+                            <input class="your-name-input" type="text" name="name" [placeholder]="'app.contact_me.your_name_placeholder' | translate">
+                            <span class="your-name-required">
+                                {{'app.contact_me.your_name_required' | translate}}
+                            </span>
+                        </div>
 
-                    <!-- <div class="line"></div> -->
-                    <label for="message">
-                        {{'app.contact_me.how_can_i_help' | translate}}
-                        <span style="display: none;">
-                            {{'app.contact_me.how_can_i_help_required' | translate}}
-                        </span>
-                    </label>
-                    <input type="textarea" name="message">
+                        <div class="your-email-container">
+                            <label class="your-email" for="email">
+                                {{'app.contact_me.your_email' | translate}}
+                            </label>
+                            <input class="your-email-input" type="text" name="email" [placeholder]="'app.contact_me.your_email_placeholder' | translate">
+                            <span class="your-email-required">
+                                {{'app.contact_me.your_email_required' | translate}}
+                            </span>
+                        </div>
+
+                        <div class="how-can-i-help-container">
+                            <label class="how-can-i-help" for="message">
+                                {{'app.contact_me.how_can_i_help' | translate}}
+                            </label>
+                            <textarea class="how-can-i-help-input" type="textarea" name="message" [placeholder]="'app.contact_me.how_can_i_help_placeholder' | translate"></textarea>
+                            <span class="how-can-i-help-required">
+                                {{'app.contact_me.how_can_i_help_required' | translate}}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-bottom-wrapper">
+                        <div class="privacy-policy-container">
+                            <input class="privacy-policy-checkbox" type="checkbox" name="" id="">
+                            <div class="text-container">
+                                <span class="privacy-policy-text"> {{'app.contact_me.check_box_first_part' | translate}} </span>
+                                <span class="privacy-policy"> {{'app.contact_me.privacy_policy' | translate}} </span>
+                                <span class="privacy-policy-text"> {{'app.contact_me.check_box_second_part' | translate}} </span>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>

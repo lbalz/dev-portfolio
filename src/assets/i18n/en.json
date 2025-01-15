@@ -82,6 +82,7 @@
             "how_can_i_help_required": "What do you need to develop?",
             "check_box_first_part": "I've read the ",
             "privacy_policy": "privacy policy ",
+            "privacy_policy_required": "Please accept the privacy policy.",
             "check_box_second_part": "and agree to the processing of my data as outlined.",
             "say_hello": "Say Hello ;)"
         },
