@@ -95,8 +95,7 @@
         "footer": {
             "web_dev": "Web Entwickler",
             "located_in": "Berlin Deutschland",
-            "imprint": "Impressum",
-            "legal_notice": "Rechtshinweis",
+            "legal_notice": "Impressum",
             "privacy_policy": "Datenschutzerklärung"
         }
     }

@@ -1,1 +1,32 @@
-<p>footer works!</p>
+<section>
+    <div class="footer-wrapper">
+        <div class="left-wrapper">
+            <a href="#landingPage">
+                <img 
+                class="logo"
+                [src]="logoImgSrc" 
+                (mouseover)="logoImgSrc = './assets/img/logo_not_filled.png'"
+                (mouseout)="logoImgSrc = './assets/img/logo_filled.png'"
+                alt="">
+            </a>
+            <div class="text-wrapper">
+                <span> {{'app.footer.web_dev' | translate}} </span>
+                <span> {{'app.footer.located_in' | translate}} </span>
+            </div>
+        </div>
+
+        <div class="middle-wrapper">
+            <span>© Lukas Balz 2025</span>
+        </div>
+
+        <div class="right-wrapper">
+            <a href="https://github.com/lbalz" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/lukas-balz-423491339/" target="_blank">LinkedIn</a>
+            <a href="mailto: {{ email }}">Email</a>
+            <a routerLink="/legal_notice"> {{'app.footer.legal_notice' | translate}} </a>
+            <a routerLink="/privacy_policy"> {{'app.footer.privacy_policy' | translate}} </a>
+            <!--! Router hinzufügen und legal notice & privacy policy seiten erstellen -->
+            <!--! Header & Footer muss bei beidem importiert werden -->
+        </div>
+    </div>
+</section>
