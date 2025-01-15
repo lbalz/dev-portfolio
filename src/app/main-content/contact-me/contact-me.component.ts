@@ -12,9 +12,18 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './contact-me.component.scss'
 })
 export class ContactMeComponent {
+  
+  constructor(private languageService: TranslateLanguageService) { 
+
+  }
+
+
+  /*
+   * Toggle checkbox images functionality
+   */
+
   checkboxImg: string = './assets/icon/checkbox_default.png';
   checkboxClicked: boolean = false;
-
 
   checkboxMouseOver() {
     if (this.checkboxClicked) {
@@ -42,15 +51,30 @@ export class ContactMeComponent {
     }
   }
 
+
+  /*
+   * Form validation functionality
+   */
+
+  formValidation() {
+    
+  }
+
+
+  /*
+   * Toggle checkbox images functionality
+   */ 
+
   sendMail() {
     
   }
 
 
-  // Translation Service
-  isEnglish: boolean = true;
+  /*
+   * Translation Service
+   */ 
 
-  constructor(private languageService: TranslateLanguageService) { }
+  isEnglish: boolean = true;
 
   translate = inject(TranslateLanguageService);
 
