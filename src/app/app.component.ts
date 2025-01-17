@@ -6,18 +6,22 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { LandingPageComponent } from "./landing-page/landing-page.component";
 import { MainContentComponent } from "./main-content/main-content.component";
 import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { LegalNoticeComponent } from "./legal-notice/legal-notice.component";
+import { PrivacyPolicyComponent } from "./privacy-policy/privacy-policy.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule, 
-    RouterOutlet, 
-    HeaderComponent, 
-    FooterComponent, 
-    LandingPageComponent, 
+    CommonModule,
+    RouterOutlet,
+    HeaderComponent,
+    FooterComponent,
+    LandingPageComponent,
     MainContentComponent,
-  ],
+    LegalNoticeComponent,
+    PrivacyPolicyComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
