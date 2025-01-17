@@ -4,95 +4,125 @@
             <div class="info">
                 <div class="headings">
                     <h5>Portfolio</h5>
-    
+
                     <h3> {{'app.portfolio_projects.featured_projects' | translate}} </h3>
                 </div>
-    
+
                 <span class="explore_work"> {{'app.portfolio_projects.explore_work' | translate}} </span>
-    
+
             </div>
 
             <div class="projects">
                 @for (project of portfolioProjects; track $index) {
 
-                    <div class="single-project"
-                        (mouseover)="onProjectHover(project.projectName)"
-                        (mouseout)="onProjectHover(null)"
-                        (click)="toggleOverlay(true)">
-                        
-                        <div class="title-container">
-                            <h4 class="project-title"> {{ project.projectName }} </h4>
-                            
-                            @if(currentHoveredProject === project.projectName) {
-                                <img class="arrow"
-                                src="./assets/icon/projects_arrow.png">
-                            }
-                            <!--! Overlay ist auch nicht richtig -->
-                        </div>
-                        
-                        <div class="stack">
-                            <span [innerHTML]="formatTechStackString(project.techStack)"></span>
-                        </div>
+                <div class="single-project" (mouseover)="onProjectHover(project.projectName)"
+                    (mouseout)="onProjectHover(null)" (click)="toggleOverlay(true)">
+
+                    <div class="title-container">
+                        <h4 class="project-title"> {{ project.projectName }} </h4>
+
+                        @if(currentHoveredProject === project.projectName) {
+                        <img class="arrow" src="./assets/icon/projects_arrow.png">
+                        }
+                        <!--! Overlay ist auch nicht richtig -->
                     </div>
 
+                    <div class="stack">
+                        <span [innerHTML]="formatTechStackString(project.techStack)"></span>
+                    </div>
+                </div>
                 }
-                
+
             </div>
         </div>
 
         <div class="right-wrapper">
             <div class="join-img-container">
-                <img class="join-img" 
+                <img class="join-img" [ngStyle]="{'display': currentHoveredProject === 'Join' ? 'block' : 'none'}"
+                    src="./assets/img/portfolio-projects/join_placeholder.jpg" alt="">
+                <img class="join-img-background"
                     [ngStyle]="{'display': currentHoveredProject === 'Join' ? 'block' : 'none'}"
-                    src="./assets/img/portfolio-projects/join_placeholder.jpg" 
-                    alt="">
-                <img class="join-img-background" 
-                    [ngStyle]="{'display': currentHoveredProject === 'Join' ? 'block' : 'none'}"
-                    src="./assets/img/about_me_hover.png" 
-                    alt="">
+                    src="./assets/img/about_me_hover.png" alt="">
             </div>
 
             <div class="pollo-loco-img-container">
-                <img class="pollo-loco-img" 
+                <img class="pollo-loco-img"
                     [ngStyle]="{'display': currentHoveredProject === 'El Pollo Loco' ? 'block' : 'none'}"
-                    src="./assets/img/portfolio-projects/pollo_loco_placeholder.jpg" 
-                    alt="">
-                <img class="pollo-loco-img-background" 
+                    src="./assets/img/portfolio-projects/pollo_loco_placeholder.jpg" alt="">
+                <img class="pollo-loco-img-background"
                     [ngStyle]="{'display': currentHoveredProject === 'El Pollo Loco' ? 'block' : 'none'}"
-                    src="./assets/img/about_me_hover.png" 
-                    alt="">
+                    src="./assets/img/about_me_hover.png" alt="">
             </div>
         </div>
     </div>
 
-    <div class="portfolio-projects-overlay"
-        [ngStyle]="{'display': showOverlay == true ? 'flex':'none'}"
+    <!-- Overlay -->
+    <div class="portfolio-projects-overlay" [ngStyle]="{'display': showOverlay == true ? 'flex':'none'}"
         (click)="toggleOverlay(false)">
 
-        <div class="single-project-overlay-wrapper"
-            (click)="$event.stopPropagation()">
+        <div class="single-project-overlay-wrapper" (click)="$event.stopPropagation()">
 
             <div class="single-project-overlay-container">
-                <a class="close-overlay">
-                    <img src="" alt="">
-                </a>
-
-                <div class="single project">
-                    <div class="project-info">
-
+                <div class="overlay-left-wrapper">
+                    <div class="overlay-left-wrapper-top-container">
+                        <span class="overlay-project-number">01</span>
+                        <span class="overlay-project-name">Join</span>
                     </div>
-    
-                    <div class="project-img">
-                        
+
+                    <div class="overlay-left-wrapper-middle-container">
+                        <span class="overlay-project-about"> {{ 'app.portfolio_projects.overlay.title' | translate }} </span>
+                        <span class="overlay-project-info-text"> {{ 'app.portfolio_projects.overlay.info.join_project' | translate }} </span>
+
+                        <div class="overlay-project-skills">
+                            @for (project of overlayProjectsTechStack; track $index) {
+                                @for (projectStack of project.join; track $index) {
+                                    <div class="overlay-stack-container">
+                                        <img src="{{projectStack.imgPath}}" alt="">
+                                        <span> {{projectStack.stack}} </span>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+
+                    <div class="overlay-left-wrapper-bottom-container">
+                        <a class="overlay-github-button" href="https://github.com/lbalz/Join-Kanban-Board">
+                            <span>Github</span>
+                            <img src="./assets/icon/overlay/overlay_outward_btn.png" alt="">
+                        </a>
+
+                        <a class="overlay-live-test-button" href="">
+                            <span>Live Test</span>
+                            <img src="./assets/icon/overlay/overlay_outward_btn.png" alt="">
+                        </a>
                     </div>
                 </div>
 
-                <a class="next-project">
-                    <span></span>
-                    <img src="" alt="">
-                </a>
+                <div class="overlay-right-wrapper">
+                    <div class="overlay-close-btn-container" (click)="toggleOverlay(false)">
+                        <img
+                        [src]="closeOverlayBtn"
+                        (mouseover)="closeOverlayBtn = './assets/icon/overlay/overlay_close_btn_hover.png'"
+                        (mouseleave)="closeOverlayBtn = './assets/icon/overlay/overlay_close_btn.png'"
+                        alt="">
+                    </div>
+
+                    <div class="overlay-img-container">
+                        <img src="./assets/img/portfolio-projects/join_placeholder.jpg" alt="">
+                    </div>
+
+                    <a 
+                    class="overlay-next-project-btn"
+                    (mouseover)="nextProjectOverlayBtn = './assets/icon/overlay/overlay_next_btn_hover.png'"
+                    (mouseleave)="nextProjectOverlayBtn = './assets/icon/overlay/overlay_next_btn.png'">
+                        <span class="next-project-text"> {{'app.portfolio_projects.overlay.next_project' | translate}} </span>
+                        <img
+                        class="next-project-arrow"
+                        [src]="nextProjectOverlayBtn"
+                        alt="">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </section>
-

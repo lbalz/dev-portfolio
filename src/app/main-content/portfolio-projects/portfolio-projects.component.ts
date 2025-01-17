@@ -15,13 +15,13 @@ export class PortfolioProjectsComponent {
   portfolioProjects: PortfolioProject[] = [
     {
       projectName: 'Join',
-      projectImgPath: './assets/img/portfolio-projects/join.png',
+      projectImgPath: './assets/img/portfolio-projects/join_placeholder.png',
       techStack: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
       techStackString: ""
     },
     {
       projectName: 'El Pollo Loco',
-      projectImgPath: './assets/img/portfolio-projects/el_pollo_loco.png',
+      projectImgPath: './assets/img/portfolio-projects/el_pollo_loco_placeholder.png',
       techStack: ['HTML', 'CSS', 'JavaScript'],
       techStackString: ""
     },
@@ -32,10 +32,50 @@ export class PortfolioProjectsComponent {
     // }
   ];
 
+  overlayProjectsTechStack = [
+    {
+      join: [
+        {
+          stack: 'HTML',
+          imgPath: './assets/icon/overlay/skills/overlay_html.png'
+        },
+        {
+          stack: 'CSS',
+          imgPath: './assets/icon/overlay/skills/overlay_css.png'
+        },
+        {
+          stack: 'JavaScript',
+          imgPath: './assets/icon/overlay/skills/overlay_js.png'
+        },
+        {
+          stack: 'Firebase',
+          imgPath: './assets/icon/overlay/skills/overlay_firebase.png'
+        },
+      ]
+    },
+    {
+      pollo_loco: [
+        {
+          stack: 'HTML',
+          imgPath: './assets/icon/overlay/skills/overlay_html.png'
+        },
+        {
+          stack: 'CSS',
+          imgPath: './assets/icon/overlay/skills/overlay_css.png'
+        },
+        {
+          stack: 'JavaScript',
+          imgPath: './assets/icon/overlay/skills/overlay_js.png'
+        },
+      ]
+    }
+  ];
+
 
     currentHoveredProject: string | null = null;
-    showOverlay: boolean = false;
-    // showArrow: boolean = false;
+    showOverlay: boolean = true; //! MUSS ZU FALSE GEÄNDERT WERDEN
+    closeOverlayBtn: string = './assets/icon/overlay/overlay_close_btn.png';
+    nextProjectOverlayBtn: string = './assets/icon/overlay/overlay_next_btn.png';
 
     onProjectHover(projectName: string | null) {
       this.currentHoveredProject = projectName;
@@ -52,7 +92,7 @@ export class PortfolioProjectsComponent {
 
 
   formatTechStackString(techStack: string[]): string {
-    return techStack.join(`<span style="color: red;"> | </span>`);
+    return techStack.join(`<span> | </span>`);
   }
 
 

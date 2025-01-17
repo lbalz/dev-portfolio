@@ -160,6 +160,7 @@ section {
     background-color: #0000007d;
     position: fixed;
     bottom: 0;
+    right: 0;
     z-index: 2;
     display: flex;
     justify-content: center;
@@ -177,9 +178,167 @@ section {
 
         .single-project-overlay-container {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
+            gap: 128px;
+
+            .overlay-left-wrapper {
+                width: 480px;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                .overlay-left-wrapper-top-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    .overlay-project-number {
+                        font-family: "Karla-Regular";
+                        font-weight: bold;
+                        font-size: 128px;
+                        color: $primary-color;
+                    }
+
+                    .overlay-project-name {
+                        font-family: "FiraCode-Bold";
+                        font-size: 64px;
+                        color: $secondary-color;
+                    }
+                }
+
+                .overlay-left-wrapper-middle-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 24px;
+
+                    .overlay-project-about {
+                        font-family: "FiraCode-Bold";
+                        font-size: 24px;
+                        color: $primary-color;
+                    }
+
+                    .overlay-project-info-text {
+                        font-family: "Karla-Light";
+                        font-size: 18px;
+                        color: $secondary-color;
+                        text-align: justify;
+                    }
+
+                    .overlay-project-skills {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+
+                        .overlay-stack-container {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 4px;
+
+                            >img {
+                                width: 24px;
+                                height: 24px;
+                            }
+    
+                            >span {
+                                font-family: "Karla-Light";
+                                font-size: 16px;
+                                color: $secondary-color;
+                            }
+                        }
+                    }
+                }
+
+                .overlay-left-wrapper-bottom-container {
+                    display: flex;
+                    align-items: center;
+                    gap: 24px;
+
+                    .overlay-github-button, .overlay-live-test-button {
+                        width: 132px;
+                        height: 48px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 4px;
+                        text-decoration: none;
+                        font-family: "Karla-Light";
+                        font-size: 18px;
+                        color: $secondary-color;
+                        border: 1px solid $secondary-color;
+                        border-radius: 24px;
+                        transition: color 0.2s ease, border-color 0.2s ease;
+
+                        img {
+                            transition: transform 0.2s ease;
+                        }
+
+                        &:hover {
+                            border-color: $primary-color;
+                            color: $primary-color;
+
+                            img {
+                                transform: translate(2px, -2px) scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .overlay-right-wrapper {
+                width: 520px;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                justify-content: space-between;
+                gap: 40px;
+
+                .overlay-close-btn-container {
+                    cursor: pointer;
+                }
+
+                .overlay-img-container {
+                    
+
+                    >img {
+                        width: 520px;
+                        border-radius: 24px;
+                    }
+                }
+
+                .overlay-next-project-btn {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    cursor: pointer;
+
+                    &:hover {
+                        .next-project-text {
+                            color: $secondary-color;
+                        }
+
+                        .next-project-arrow {
+                            transform: translate(2px, -2px) scale(1.1);
+                        }
+                    }
+
+                    .next-project-text {
+                        font-family: "Karla-Light";
+                        font-size: 18px;
+                        color: $primary-color;
+                    }
+
+                    .next-project-arrow {
+                        width: 32px;
+                        height: 32px;
+                        transition: transform 0.2s ease;
+                    }
+                }
+            }
         }
     }
 }
