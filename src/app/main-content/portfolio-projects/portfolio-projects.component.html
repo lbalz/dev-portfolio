@@ -28,9 +28,17 @@
                     </div>
 
                     <div class="stack">
-                        <span [innerHTML]="formatTechStackString(project.techStack)"></span>
+                        @for (tech of project.techStack; track $index) {
+                            {{ tech }}
+
+                            @if ($index < project.techStack.length - 1) {
+                                <span class="separator">|</span>
+                            }
+                        }
                     </div>
                 </div>
+
+                <!-- Overlay-->
                 }
 
             </div>

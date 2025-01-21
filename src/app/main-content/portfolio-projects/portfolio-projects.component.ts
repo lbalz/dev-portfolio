@@ -9,7 +9,13 @@ import { CommonModule, NgStyle } from '@angular/common';
   standalone: true,
   imports: [TranslateModule, NgStyle, CommonModule],
   templateUrl: './portfolio-projects.component.html',
-  styleUrl: './portfolio-projects.component.scss'
+  styleUrl: './portfolio-projects.component.scss',
+  styles: [`
+      .separator {
+        color: #3DCFB6;
+        margin: 0 4px;
+      }
+    `]
 })
 export class PortfolioProjectsComponent {
   portfolioProjects: PortfolioProject[] = [
@@ -73,7 +79,7 @@ export class PortfolioProjectsComponent {
 
 
     currentHoveredProject: string | null = null;
-    showOverlay: boolean = true; //! MUSS ZU FALSE GEÄNDERT WERDEN
+    showOverlay: boolean = false;
     closeOverlayBtn: string = './assets/icon/overlay/overlay_close_btn.png';
     nextProjectOverlayBtn: string = './assets/icon/overlay/overlay_next_btn.png';
 
@@ -85,15 +91,6 @@ export class PortfolioProjectsComponent {
       this.showOverlay = isVisible;
     }
 
-    // toggleArrow(isVisible: boolean) {
-    //   this.showArrow = isVisible;
-    // }
-
-
-
-  formatTechStackString(techStack: string[]): string {
-    return techStack.join(`<span> | </span>`);
-  }
 
 
 
@@ -101,10 +98,7 @@ export class PortfolioProjectsComponent {
   // Translation Service
   isEnglish: boolean = true;
 
-  constructor(private languageService: TranslateLanguageService) { 
-    this.portfolioProjects[0].techStackString = this.portfolioProjects[0].techStack.join(`<span style="color: red;"> | </span>`);
-    this.portfolioProjects[1].techStackString = this.portfolioProjects[1].techStack.join(`<span style="color: #3DCFB6;"> | </span>`);
-  }
+  constructor(private languageService: TranslateLanguageService) { }
 
   translate = inject(TranslateLanguageService);
 
