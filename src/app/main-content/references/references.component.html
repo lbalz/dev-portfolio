@@ -1,29 +1,35 @@
 <section>
-    <div class="references-container">
+    <div class="references-page-container">
         <div class="title-container">
             <h4> {{'app.references.title' | translate}} </h4>
         </div>
 
         <div class="references-wrapper">
-            <div>
-                <div class="reference-container">
-                    <div>
-                        <span class="reference"> {{'app.references.team_partner.ben.reference' | translate}} </span>
+            <div class="references-container">
+                @for (reference of references; track $index) {
+                <div class="reference" [ngClass]="getReferenceClass($index)">
+                    <div class="reference-text-container">
+                        <span class="reference-text"> {{ reference.reference | translate }} </span>
                     </div>
+
                     <div class="name-container">
                         <div class="line"></div>
-                        <span class="name"> {{'app.references.team_partner.ben.name' | translate}} </span>
+                        <span class="name">{{ reference.name | translate }}</span>
                     </div>
                 </div>
-                <div class="second-reference-container">
-
-                </div>
-                <div class="third-reference-container">
-
-                </div>
+                }
             </div>
-            <div class="change-reference-container">
 
+            <div class="change-reference-container">
+                <img src="./assets/icon/references_arrow_previous.png" alt="Previous" (click)="previousReference()"
+                    class="arrow previous" />
+                <div class="dots">
+                    @for (reference of references; track $index) {
+                    <span [class.active]="$index === currentIndex"></span>
+                    }
+                </div>
+                <img src="./assets/icon/references_arrow_next.png" alt="Next" (click)="nextReference()"
+                    class="arrow next" />
             </div>
         </div>
     </div>

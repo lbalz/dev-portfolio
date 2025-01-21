@@ -9,79 +9,134 @@ section {
     justify-content: center;
     font-family: "Karla-Regular";
 
-    .references-container {
+    .references-page-container {
         width: 100%;
-        height: 456px;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 48px;
-    }
-}
 
-.title-container {
+        .title-container {
+            h4 {
+                color: $primary-color;
+                font-size: 32px;
+                font-weight: bold;
+            }
+        }
 
-    >h4 {
-        color: $primary-color;
-        font-size: 32px;
-        font-weight: bold;
-    }
-}
-
-.references-wrapper {
-    width: 1440px;
-    height: 400px;
-
-    .change-reference-container {
-        width: 100px;
-        height: 32px;
-    }
-
-    >div {
-        width: 100%;
-        height: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .reference-container {
-            width: 560px;
-            height: 272px;
-            background: #3DCFB64D;
-            border-radius: 24px;
-            border: 1px solid $primary-color;
-            text-align: justify;
+        .references-wrapper {
+            width: 100%;
+            max-width: 1200px;
+            height: 450px;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
+            gap: 20px;
 
-            >div {
-                width: 480px;
-                height: auto;
+            position: relative;
+        
+            .references-container {
+                width: 100%;
+                height: 350px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 80px;
 
+                position: relative;
+        
                 .reference {
-                    font-size: 20px;
-                    color: $secondary-color;
+                    width: 560px;
+                    padding: 0 20px;
+                    height: 350px;
+                    background: #3DCFB64D;
+                    border-radius: 24px;
+                    border: 1px solid $primary-color;
+                    text-align: justify;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    position: absolute;
+                    transition: transform 0.5s ease, opacity 0.3s ease;
+                    opacity: 0;
+
+                    &.current {
+                        transform: translateX(0);
+                        opacity: 1;
+                        z-index: 2;
+                    }
+
+                    &.previous {
+                        transform: translateX(-600px);
+                        opacity: 0.5;
+                        z-index: 1;
+                    }
+
+                    &.next {
+                        transform: translateX(600px);
+                        opacity: 0.5;
+                        z-index: 1;
+                    }
+        
+                    .reference-text-container {
+                        width: 100%;
+                        height: auto;
+        
+                        .reference-text {
+                            font-size: 20px;
+                            color: $secondary-color;
+                        }
+                    }
+        
+                    .name-container {
+                        width: 480px;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+        
+                        .line {
+                            width: 280px;
+                            height: 1px;
+                            background-color: $secondary-color;
+                        }
+        
+                        .name {
+                            font-size: 18px;
+                            color: $secondary-color;
+                        }
+                    }
                 }
             }
 
-            .name-container {
-                width: 480px;
-                height: auto;
+            .change-reference-container {
+                width: 100%;
+                height: 32px;
                 display: flex;
+                justify-content: center;
                 align-items: center;
-                justify-content: space-between;
+                gap: 20px;
+        
+                .dots {
+                    display: flex;
+                    gap: 10px;
 
-                .line {
-                    width: 280px;
-                    height: 1px;
-                    background-color: $secondary-color;
+                    span {
+                        width: 10px;
+                        height: 10px;
+                        background-color: rgba($primary-color, 0.3);
+                        border-radius: 50%;
+
+                        &.active {
+                            background-color: $primary-color;
+                        }
+                    }
                 }
 
-                .name {
-                    font-size: 18px;
-                    color: $secondary-color;
+                .arrow {
+                    cursor: pointer;
                 }
             }
         }
