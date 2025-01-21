@@ -180,6 +180,7 @@ section {
             text-wrap: wrap;
             text-align: center;
             transition: opacity 0.3s ease-in;
+            pointer-events: none;
 
             >span {
                 font-family: "Karla-Light";
