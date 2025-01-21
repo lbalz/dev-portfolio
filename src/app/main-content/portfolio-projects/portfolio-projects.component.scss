@@ -179,10 +179,10 @@ section {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            gap: 128px;
+            gap: 108px;
 
             .overlay-left-wrapper {
-                width: 480px;
+                width: 500px;
                 height: auto;
                 display: flex;
                 flex-direction: column;
@@ -305,6 +305,7 @@ section {
 
                     >img {
                         width: 520px;
+                        height: 370px;
                         border-radius: 24px;
                     }
                 }

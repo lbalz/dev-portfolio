@@ -16,7 +16,7 @@
                 @for (project of portfolioProjects; track $index) {
 
                 <div class="single-project" (mouseover)="onProjectHover(project.projectName)"
-                    (mouseout)="onProjectHover(null)" (click)="toggleOverlay(true)">
+                    (mouseout)="onProjectHover(null)" (click)="toggleOverlay(true, project)">
 
                     <div class="title-container">
                         <h4 class="project-title"> {{ project.projectName }} </h4>
@@ -73,33 +73,47 @@
             <div class="single-project-overlay-container">
                 <div class="overlay-left-wrapper">
                     <div class="overlay-left-wrapper-top-container">
-                        <span class="overlay-project-number">01</span>
-                        <span class="overlay-project-name">Join</span>
+                        <span class="overlay-project-number"> {{ selectedProject?.id?.toString()?.padStart(2, '0') }} </span>
+                        <span class="overlay-project-name"> {{ selectedProject?.projectName }} </span>
                     </div>
 
                     <div class="overlay-left-wrapper-middle-container">
                         <span class="overlay-project-about"> {{ 'app.portfolio_projects.overlay.title' | translate }} </span>
-                        <span class="overlay-project-info-text"> {{ 'app.portfolio_projects.overlay.info.join_project' | translate }} </span>
+                        <span class="overlay-project-info-text">
+                            @if (selectedProject) {
+                                {{ selectedProject.infoTranslationKey | translate }}
+                            }
+                        </span>
 
                         <div class="overlay-project-skills">
-                            @for (project of overlayProjectsTechStack; track $index) {
+                            @if (selectedProject) {
+                                @for (techItem of overlayProjectsTechStack[selectedProject.projectName]; track $index) {
+                                    <div class="overlay-stack-container">
+                                        <img [src]="techItem.imgPath" alt="">
+                                        <span> {{ techItem.stack }} </span>
+                                    </div>
+                                }
+                            }
+
+
+                            <!-- @for (project of overlayProjectsTechStack; track $index) {
                                 @for (projectStack of project.join; track $index) {
                                     <div class="overlay-stack-container">
                                         <img src="{{projectStack.imgPath}}" alt="">
                                         <span> {{projectStack.stack}} </span>
                                     </div>
                                 }
-                            }
+                            } -->
                         </div>
                     </div>
 
                     <div class="overlay-left-wrapper-bottom-container">
-                        <a class="overlay-github-button" href="https://github.com/lbalz/Join-Kanban-Board">
+                        <a class="overlay-github-button" [href]="selectedProject?.githubUrl" target="_blank">
                             <span>Github</span>
                             <img src="./assets/icon/overlay/overlay_outward_btn.png" alt="">
                         </a>
 
-                        <a class="overlay-live-test-button" href="">
+                        <a class="overlay-live-test-button" [href]="selectedProject?.liveTestUrl" target="_blank">
                             <span>Live Test</span>
                             <img src="./assets/icon/overlay/overlay_outward_btn.png" alt="">
                         </a>
@@ -116,11 +130,14 @@
                     </div>
 
                     <div class="overlay-img-container">
-                        <img src="./assets/img/portfolio-projects/join_placeholder.jpg" alt="">
+                        @if (selectedProject) {
+                            <img [src]="selectedProject.imageUrl" alt="">
+                        }
                     </div>
 
                     <a 
                     class="overlay-next-project-btn"
+                    (click)="onNextProject()"
                     (mouseover)="nextProjectOverlayBtn = './assets/icon/overlay/overlay_next_btn_hover.png'"
                     (mouseleave)="nextProjectOverlayBtn = './assets/icon/overlay/overlay_next_btn.png'">
                         <span class="next-project-text"> {{'app.portfolio_projects.overlay.next_project' | translate}} </span>

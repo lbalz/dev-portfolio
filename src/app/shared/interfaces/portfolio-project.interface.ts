@@ -1,6 +1,9 @@
 export interface PortfolioProject {
+    id: number;
     projectName: string;
-    projectImgPath: string;
     techStack: string[];
-    techStackString: String;
+    imageUrl: string;
+    githubUrl: string;
+    liveTestUrl: string;
+    infoTranslationKey: string;
 }
