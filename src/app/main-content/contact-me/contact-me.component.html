@@ -16,14 +16,21 @@
         </div>
         <div class="right-wrapper">
             <div class="contact-form-container">
-                <form (ngSubmit)="sendMail()">
+                <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                     <div class="contact-form-top-wrapper">
 
                         <div class="your-name-container">
                             <label class="your-name" for="name">
                                 {{'app.contact_me.your_name' | translate}}
                             </label>
-                            <input id="name" class="your-name-input" type="text" name="name" [placeholder]="'app.contact_me.your_name_placeholder' | translate">
+                            <input 
+                            id="name" 
+                            class="your-name-input" 
+                            type="text" name="name" 
+                            [placeholder]="'app.contact_me.your_name_placeholder' | translate"
+                            (focus)="onNameFocus()"
+                            (blur)="onNameBlur()"
+                            [(ngModel)]="contactData.name">
                             <span class="your-name-required">
                                 {{'app.contact_me.your_name_required' | translate}}
                             </span>
@@ -33,7 +40,15 @@
                             <label class="your-email" for="email">
                                 {{'app.contact_me.your_email' | translate}}
                             </label>
-                            <input id="email" class="your-email-input" type="text" name="email" [placeholder]="'app.contact_me.your_email_placeholder' | translate">
+                            <input
+                            id="email" 
+                            class="your-email-input" 
+                            type="text" name="email" 
+                            [placeholder]="'app.contact_me.your_email_placeholder' | translate"
+                            (focus)="onEmailFocus()"
+                            (blur)="onEmailBlur()"
+                            (keyup)="checkEmailValidation()"
+                            [(ngModel)]="contactData.email">
                             <span class="your-email-required">
                                 {{'app.contact_me.your_email_required' | translate}}
                             </span>
@@ -43,7 +58,15 @@
                             <label class="how-can-i-help" for="message">
                                 {{'app.contact_me.how_can_i_help' | translate}}
                             </label>
-                            <textarea id="message" class="how-can-i-help-input" type="textarea" name="message" [placeholder]="'app.contact_me.how_can_i_help_placeholder' | translate"></textarea>
+                            <textarea 
+                            id="message" 
+                            class="how-can-i-help-input" 
+                            type="textarea" 
+                            name="message" 
+                            [placeholder]="'app.contact_me.how_can_i_help_placeholder' | translate"
+                            (focus)="onMessageFocus()"
+                            (blur)="onMessageBlur()"
+                            [(ngModel)]="contactData.message"></textarea>
                             <span class="how-can-i-help-required">
                                 {{'app.contact_me.how_can_i_help_required' | translate}}
                             </span>
@@ -60,7 +83,11 @@
                                     (mouseover)="checkboxMouseOver()"
                                     (mouseleave)="checkboxMouseLeave()"
                                     (click)="toggleCheckbox()">
-                                    <input class="privacy-policy-checkbox" type="checkbox" name="checkbox" id="checkbox">
+                                    <input
+                                    id="checkbox" 
+                                    class="privacy-policy-checkbox" 
+                                    type="checkbox" 
+                                    name="checkbox">
                                 </div>
                                 <div class="text-container">
                                     <span class="privacy-policy-text"> {{'app.contact_me.check_box_first_part' | translate}} </span>
@@ -74,7 +101,7 @@
                         </div>
 
                         <div class="submit-container">
-                            <button class="submit-btn" type="submit" disabled> {{'app.contact_me.say_hello' | translate}} </button>
+                            <button class="submit-btn" type="submit" [disabled]="!formIsValid()"> {{'app.contact_me.say_hello' | translate}} </button>
                         </div>
                     </div>
                 </form>
