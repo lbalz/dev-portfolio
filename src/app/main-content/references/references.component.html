@@ -21,15 +21,23 @@
             </div>
 
             <div class="change-reference-container">
-                <img src="./assets/icon/references_arrow_previous.png" alt="Previous" (click)="previousReference()"
-                    class="arrow previous" />
+                <img 
+                [src]="previousArrowImg" 
+                (mouseover)="previousArrowImg = './assets/icon/references_arrow_previous_hover.png'"
+                (mouseleave)="previousArrowImg = './assets/icon/references_arrow_previous.png'"
+                (click)="previousReference()"
+                class="arrow previous" />
                 <div class="dots">
                     @for (reference of references; track $index) {
                     <span [class.active]="$index === currentIndex"></span>
                     }
                 </div>
-                <img src="./assets/icon/references_arrow_next.png" alt="Next" (click)="nextReference()"
-                    class="arrow next" />
+                <img
+                [src]="nextArrowImg" 
+                (mouseover)="nextArrowImg = './assets/icon/references_arrow_next_hover.png'"
+                (mouseleave)="nextArrowImg = './assets/icon/references_arrow_next.png'"
+                (click)="nextReference()"
+                class="arrow next" />
             </div>
         </div>
     </div>

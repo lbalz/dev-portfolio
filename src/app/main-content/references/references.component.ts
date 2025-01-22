@@ -11,6 +11,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './references.component.scss'
 })
 export class ReferencesComponent {
+  previousArrowImg = "./assets/icon/references_arrow_previous.png";
+  nextArrowImg = "./assets/icon/references_arrow_next.png";
+  
   currentIndex = 0;
   references = [
     {

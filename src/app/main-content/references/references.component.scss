@@ -137,6 +137,11 @@ section {
 
                 .arrow {
                     cursor: pointer;
+                    transition: transform 0.2s ease;
+
+                    &:hover {
+                        transform: translate(2px, -2px) scale(1.1);
+                    }
                 }
             }
         }
