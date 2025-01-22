@@ -93,10 +93,11 @@ section {
                     flex-direction: column;
                     width: 600px;
                     height: 560px;
+                    gap: 12px;
 
                     .contact-form-top-wrapper {
                         width: 100%;
-                        height: 408px;
+                        height: auto;
                         display: flex;
                         flex-direction: column;
 

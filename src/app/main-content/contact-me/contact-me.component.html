@@ -23,7 +23,7 @@
                             <label class="your-name" for="name">
                                 {{'app.contact_me.your_name' | translate}}
                             </label>
-                            <input class="your-name-input" type="text" name="name" [placeholder]="'app.contact_me.your_name_placeholder' | translate">
+                            <input id="name" class="your-name-input" type="text" name="name" [placeholder]="'app.contact_me.your_name_placeholder' | translate">
                             <span class="your-name-required">
                                 {{'app.contact_me.your_name_required' | translate}}
                             </span>
@@ -33,7 +33,7 @@
                             <label class="your-email" for="email">
                                 {{'app.contact_me.your_email' | translate}}
                             </label>
-                            <input class="your-email-input" type="text" name="email" [placeholder]="'app.contact_me.your_email_placeholder' | translate">
+                            <input id="email" class="your-email-input" type="text" name="email" [placeholder]="'app.contact_me.your_email_placeholder' | translate">
                             <span class="your-email-required">
                                 {{'app.contact_me.your_email_required' | translate}}
                             </span>
@@ -43,7 +43,7 @@
                             <label class="how-can-i-help" for="message">
                                 {{'app.contact_me.how_can_i_help' | translate}}
                             </label>
-                            <textarea class="how-can-i-help-input" type="textarea" name="message" [placeholder]="'app.contact_me.how_can_i_help_placeholder' | translate"></textarea>
+                            <textarea id="message" class="how-can-i-help-input" type="textarea" name="message" [placeholder]="'app.contact_me.how_can_i_help_placeholder' | translate"></textarea>
                             <span class="how-can-i-help-required">
                                 {{'app.contact_me.how_can_i_help_required' | translate}}
                             </span>
@@ -60,7 +60,7 @@
                                     (mouseover)="checkboxMouseOver()"
                                     (mouseleave)="checkboxMouseLeave()"
                                     (click)="toggleCheckbox()">
-                                    <input class="privacy-policy-checkbox" type="checkbox" name="" id="">
+                                    <input class="privacy-policy-checkbox" type="checkbox" name="checkbox" id="checkbox">
                                 </div>
                                 <div class="text-container">
                                     <span class="privacy-policy-text"> {{'app.contact_me.check_box_first_part' | translate}} </span>
