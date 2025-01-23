@@ -128,7 +128,7 @@ export class ContactMeComponent {
     message: ''
   }
 
-  mailTest = true;
+  mailTest = false; //! Zum testen muss true sein
 
   post = {
     endPoint: 'lukas-balz.de/sendMail.php',
