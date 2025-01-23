@@ -131,7 +131,7 @@ export class ContactMeComponent {
   mailTest = false; //! Zum testen muss true sein
 
   post = {
-    endPoint: 'lukas-balz.de/sendMail.php',
+    endPoint: 'sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

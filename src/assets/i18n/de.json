@@ -86,11 +86,10 @@
             "check_box_second_part": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
             "say_hello": "Sag Hallo ;)"
         },
-        "imprint": {
-
-        },
         "legal_notice": {
-
+            "legal_notice": "Impressum",
+            "contact": "Kontakt:",
+            "phone": "Telefon:"
         },
         "footer": {
             "web_dev": "Web Entwickler",
