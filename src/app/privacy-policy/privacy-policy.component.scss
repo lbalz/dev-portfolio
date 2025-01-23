@@ -1,0 +1,176 @@
+$primary-color: #3DCFB6;
+$secondary-color: #FFFFFF;
+
+.primary-color {
+    color: $primary-color;
+    font-size: 24px;
+}
+
+.subheading {
+    color: $primary-color;
+}
+
+section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: #1C1C1C;
+    color: $secondary-color;
+    font-family: "Karla-Regular";
+
+    .privacy-policy {
+        width: 1440px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 88px;
+        margin-bottom: 88px;
+        gap: 24px;
+
+        .privacy-policy-button-container {
+            width: 100px;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            >a {
+                width: 100px;
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 24px;
+                border: 1px solid $secondary-color;
+                text-decoration: none;
+                color: $secondary-color;
+                font-size: 20px;
+
+                &:hover {
+                    color: $primary-color;
+                    border-color: $primary-color;
+                }
+            }
+        }
+
+        .privacy-policy-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 20px;
+
+            .privacy-policy-info-top-container {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                >h1 {
+                    font-size: 80px;
+                    color: $primary-color;
+                }
+
+                >div {
+                    display: flex;
+                    flex-direction: column;
+
+                    >span {
+                        >a {
+                            text-decoration: none;
+                            color: $secondary-color;
+
+                            &:hover {
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .rights-of-those-affected-container {
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+            gap: 8px;
+
+            .rights-of-those-affected-top-container {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .rights-of-those-affected-bottom-container {
+                display: flex;
+                flex-direction: column;
+                
+                >span {
+                    >a {
+                        text-decoration: none;
+                        color: $secondary-color;
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .processing-activities-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .contact-us,
+            .legal-basis-container,
+            .recipient-container,
+            .storage-period-container,
+            .provision-required-or-required-container,
+            .contradiction-container {
+                display: flex;
+                flex-direction: column;
+                font-size: 20px;
+                text-align: justify;
+            }
+        }
+
+        .information-about-your-right-to-object-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .individual-case-related-right-of-objection-container,
+            .recipient-of-an-objection-container,
+            .changes-to-our-privacy-policy-container,
+            .questions-about-privacy-policy-container,
+            .copyright-notices-container {
+                display: flex;
+                flex-direction: column;
+                font-size: 20px;
+                text-align: justify;
+
+                >a {
+                    text-decoration: none;
+                    color: $secondary-color;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+
+                >span {
+                    >a {
+                        text-decoration: none;
+                        color: $secondary-color;
+    
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
