@@ -97,6 +97,11 @@ section {
             cursor: pointer;
 
             .lets-talk {
+                width: 120px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 text-decoration: none;
                 color: $secondary-color;
                 font-size: 18px;
@@ -107,7 +112,7 @@ section {
                 border-color: $primary-color;
                 transition: ease 0.75s;
 
-                >a {
+                >span {
                     color: $primary-color;
                     position: relative;
                     animation: slide-out-in 2.5s infinite;

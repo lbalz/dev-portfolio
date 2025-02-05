@@ -199,6 +199,8 @@ section {
                                         font-family: "FiraCode-Light";
                                         font-size: 15px;
                                         color: $primary-color;
+                                        text-decoration: none;
+                                        cursor: pointer;
 
                                         &:hover {
                                             color: $secondary-color;

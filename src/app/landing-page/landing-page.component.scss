@@ -87,7 +87,7 @@ section {
             display: flex;
             gap: 48px;
 
-            >div {
+            >a {
                 width: 180px;
                 height: 48px;
                 display: flex;
@@ -97,12 +97,16 @@ section {
                 border: 1px solid white;
                 cursor: pointer;
                 overflow: clip;
+                text-decoration: none;
+                color: #FFFFFF;
+                font-family: 'Karla-Regular';
+                font-size: 18px;
 
                 &:hover {
                     border-color: #3DCFB6;
                     
                     
-                    >a {
+                    >span {
                         width: 180px;
                         height: 48px;
                         display: flex;
@@ -112,13 +116,6 @@ section {
                         position: relative;
                         animation: slide-out-in 2.5s infinite;
                     }
-                }
-    
-                >a {
-                    text-decoration: none;
-                    color: white;
-                    font-family: 'Karla-Regular';
-                    font-size: 18px;
                 }
             }
         }
