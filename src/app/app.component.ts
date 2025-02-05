@@ -9,13 +9,14 @@ import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-transl
 import { LegalNoticeComponent } from "./legal-notice/legal-notice.component";
 import { PrivacyPolicyComponent } from "./privacy-policy/privacy-policy.component";
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     CommonModule,
     RouterOutlet,
-    HeaderComponent,
+    HeaderComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
