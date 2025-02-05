@@ -7,6 +7,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     .contact-wrapper {
         width: 1248px;
@@ -255,5 +256,47 @@ section {
                 }
             }
         }
+    }
+}
+
+.pop-up-msg-box {
+    width: 400px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: "Karla-Regular";
+    font-size: 32px;
+    color: $primary-color;
+    background: #1C1C1C;
+    text-align: center;
+    border-radius: 24px;
+    border: 1px solid $primary-color;
+    position: absolute;
+    top: 270px;
+    right: 200px;
+    opacity: 0;
+
+    &.animate {
+        animation: popUpAnimation 3s ease-out forwards;
+    }
+}
+
+@keyframes popUpAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    40% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    60% {
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.7);
     }
 }

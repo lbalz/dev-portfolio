@@ -15,6 +15,11 @@ import { RouterLink } from '@angular/router';
 })
 export class ContactMeComponent {
   /*
+   * Popup Animation
+   */
+  showPopup = false;
+  
+  /*
    * Form Validation
    */
   nameWasFocused = false;
@@ -115,8 +120,8 @@ export class ContactMeComponent {
 
   updateSubmitBtn() {
     const sendMailButton = document.querySelector('.submit-btn') as HTMLButtonElement;
-    // sendMailButton.disabled = !this.formIsValid();
-    if (!this.formIsValid()) {
+    sendMailButton.disabled = !this.formIsValid();
+    if (sendMailButton.disabled === true) {
       sendMailButton.classList.add('disabled-btn');
       sendMailButton.classList.remove('activated-btn');
     } else {
@@ -136,7 +141,7 @@ export class ContactMeComponent {
     message: ''
   }
 
-  mailTest = false; //! Zum testen muss true sein
+  mailTest = true; //! Zum testen muss true sein
 
   post = {
     endPoint: 'sendMail.php',
@@ -167,7 +172,11 @@ export class ContactMeComponent {
       console.log(this.contactData);
     } else if (ngForm.form.valid && ngForm.submitted && this.mailTest) {
       console.log(this.contactData);
-      // this.sendMessagePopUp();
+      this.showPopup = true;
+      setTimeout(() => {
+        this.showPopup = false;
+      }, 5000);
+
       this.resetForm(ngForm);
     }
   }
