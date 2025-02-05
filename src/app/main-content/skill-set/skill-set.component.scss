@@ -11,6 +11,12 @@ section {
     scroll-margin-top: 100px;
     position: relative;
     z-index: 2;
+
+    @media (max-width: 950px) {
+        height: auto;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
 }
 
 .left-border-shadow {
@@ -27,8 +33,32 @@ section {
     width: 1200px;
     height: 100%;
     display: flex;
+    justify-content: center;
     gap: 100px;
     cursor: default;
+
+    @media (max-width: 1250px) {
+        width: auto;
+        gap: 80px;
+    }
+
+    @media (max-width: 1150px) {
+        gap: 60px;
+    }
+
+    @media (max-width: 1050px) {
+        gap: 40px;
+    }
+
+    @media (max-width: 950px) {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    @media (max-width: 580px) {
+        gap: 20px;
+    }
 }
 
 .left-wrapper {
@@ -52,9 +82,39 @@ section {
         border: 1px solid $primary-color;
         padding: 24px;
 
+        @media (max-width: 1250px) {
+            width: 480px;
+            height: auto;
+        }
+
+        @media (max-width: 580px) {
+            width: 440px;
+            padding: 8px;
+        }
+
+        @media (max-width: 470px) {
+            width: 370px;
+        }
+
+        @media (max-width: 380px) {
+            width: 300px;
+        }
+
         .skill-set-headline {
             font-size: 64px;
             color: $primary-color;
+
+            @media (max-width: 580px) {
+                font-size: 56px;
+            }
+    
+            @media (max-width: 470px) {
+                font-size: 48px;
+            }
+
+            @media (max-width: 380px) {
+                font-size: 40px;
+            }
         }
 
         .skill-set-text-wrapper {
@@ -69,6 +129,10 @@ section {
 
                 .skill-text {
                     font-size: 18px;
+
+                    @media (max-width: 480px) {
+                        font-size: 14px;
+                    }
                 }
             }
 
@@ -79,6 +143,10 @@ section {
 
                 .need-skill-container {
                     font-size: 24px;
+
+                    @media (max-width: 480px) {
+                        font-size: 20px;
+                    }
 
                     .you-need {
                         font-weight: bold;
@@ -92,6 +160,10 @@ section {
 
                 .feel-free {
                     font-size: 16px;
+
+                    @media (max-width: 480px) {
+                        font-size: 14px;
+                    }
                 }
             }
         }
@@ -138,9 +210,40 @@ section {
     width: 640px;
     height: 320px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 48px;
     padding-top: 64px;
+
+    @media (max-width: 1250px) {
+        width: 530px;
+    }
+
+    @media (max-width: 1150px) {
+        width: 480px;
+    }
+
+    @media (max-width: 1050px) {
+        width: 420px;
+    }
+
+    @media (max-width: 950px) {
+        height: auto;
+        width: 530px;
+    }
+
+    @media (max-width: 580px) {
+        width: 440px;
+    }
+
+    @media (max-width: 470px) {
+        width: 370px;
+    }
+
+    @media (max-width: 380px) {
+        width: 280px;
+        justify-content: center;
+    }
 
     >div {
         width: 72px;
@@ -149,9 +252,28 @@ section {
         align-items: center;
         gap: 4px;
 
+        @media (max-width: 1250px) {
+            width: 64px;
+        }
+
         >img {
             width: 64px;
             height: 64px;
+
+            @media (max-width: 1250px) {
+                width: 56px;
+                height: 56px;
+            }
+
+            @media (max-width: 1050px) {
+                width: 48px;
+                height: 48px;
+            }
+
+            @media (max-width: 350px) {
+                width: 40px;
+                height: 40px;
+            }
         }
 
         >span {
