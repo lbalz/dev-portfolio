@@ -4,12 +4,23 @@ $secondary-color: #FFFFFF;
 section {
     width: 1440px;
     height: 720px;
-    background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, rgba(8, 70, 59, 0.3) 0%, #1C1C1C 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: "Karla-Regular";
     scroll-margin-top: 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.left-border-shadow {
+    width: 540px;
+    height: 540px;
+    position: absolute;
+    top: 40px;
+    left: -170px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(8, 70, 59, 1) 0%, #1C1C1C 100%);
+    z-index: -1;
 }
 
 .skills-wrapper {
