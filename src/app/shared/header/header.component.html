@@ -45,16 +45,50 @@
             </a>
         </div>
 
+        <!-- Logo Mobile -->
+        <div class="logo-wrapper-mobile">
+            <a href="#landingPage">
+                <img 
+                [src]="logoMobileImgSrc" 
+                (mouseover)="logoMobileImgSrc = './assets/img/logo_not_filled_mobile.png'"
+                (mouseout)="logoMobileImgSrc = './assets/img/logo_filled_mobile.png'"
+                class="logo-mobile" alt="logo">
+            </a>
+        </div>
+
         <!-- Burger Menu -->
-        <div class="burger-menu">
+        <div class="burger-menu" (click)="toggleMobileMenu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
+    </div>
 
-        <!-- Mobile Overlay Navigation -->
-        <div class="mobile-menu-wrapper">
-
+    <!-- Mobile Overlay Navigation -->
+    <div class="mobile-overlay" [ngStyle]="{'display': isMobileMenuOpen == true ? 'flex' : 'none'}" (click)="toggleMobileMenu()">
+        <div class="mobile-menu-wrapper" (click)="$event.stopPropagation()">
+            <nav>
+                <a href="#aboutMe">{{ 'app.header.about_me' | translate }}</a>
+                <a href="#skills">{{ 'app.header.skills' | translate }}</a>
+                <a href="#portfolioProjects">{{ 'app.header.projects' | translate }}</a>
+            </nav>
+            
+            <div
+            class="slide-toggle-container" 
+            [ngClass]="{'en-selected': !isEnglish, 'de-selected': isEnglish}">
+                <div 
+                class="slide-toggle-de" 
+                [ngClass]="{'active': isEnglish}"
+                (click)="translate.switchLanguage('de'); toggleLanguageBtnStyle('DE'); toggleLanguage()">
+                    <span>DE</span>
+                </div>
+                <div 
+                class="slide-toggle-en" 
+                [ngClass]="{'active': !isEnglish}"
+                (click)="translate.switchLanguage('en'); toggleLanguageBtnStyle('EN'); toggleLanguage()">
+                    <span>EN</span>
+                </div>
+            </div>
         </div>
     </div>
 </header>

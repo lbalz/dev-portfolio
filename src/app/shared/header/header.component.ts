@@ -15,6 +15,7 @@ import { TranslateLanguageService } from '../../translate-language.service';
 })
 export class HeaderComponent {
   logoImgSrc: string = './assets/img/logo_filled.png';
+  logoMobileImgSrc: string = './assets/img/logo_filled_mobile.png';
   isEnglish: boolean = false;
   isMobileMenuOpen: boolean = false;
 
@@ -33,5 +34,6 @@ export class HeaderComponent {
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    console.log(this.isMobileMenuOpen);
   }
 }

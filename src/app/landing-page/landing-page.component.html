@@ -12,14 +12,14 @@
 
         <div class="main-content">
             <h4>{{ 'app.landing_page.fe_dev' | translate }}</h4>
-            <div>
-                <h1>Lukas Balz</h1>
-                <div>
-                    <a href="#portfolioProjects">
-                        <span>{{ 'app.landing_page.check_work' | translate }}</span>
+            <div class="name-nav-btns-container">
+                <h1 class="name">Lukas Balz</h1>
+                <div class="nav-btns-container">
+                    <a href="#portfolioProjects" class="link-btn">
+                        <span class="link-btn-text">{{ 'app.landing_page.check_work' | translate }}</span>
                     </a>
-                    <a href="#contactMe">
-                        <span>{{ 'app.landing_page.contact_me' | translate }}</span>
+                    <a href="#contactMe" class="link-btn">
+                        <span class="link-btn-text">{{ 'app.landing_page.contact_me' | translate }}</span>
                     </a>
                 </div>
             </div>
@@ -27,20 +27,19 @@
     
         <div class="right-line-buttons-email-container">
             <div class="buttons-email-container">
-                <div class="email-container">
-                    <a class="email" href="mailto: {{ email }}">
-                        {{ email }}
-                    </a>
-    
-                    <a class="email-logo" href="">
+                <a class="email" href="mailto: {{ email }}">
+                    {{ email }}
+                </a>
+                
+                <div class="buttons-container">
+                    <a class="email-logo" href="mailto: {{ email }}">
                         <img 
                         [src]="currentEmailIcon"
                         (mouseover)="currentEmailIcon = icons.email.hover"
                         (mouseleave)="currentEmailIcon = icons.email.normal"
                         alt="">
                     </a>
-                </div>
-                <div class="buttons-container">
+
                     <a href="https://github.com/lbalz" target="_blank">
                         <img 
                         [src]="currentGithubIcon"
