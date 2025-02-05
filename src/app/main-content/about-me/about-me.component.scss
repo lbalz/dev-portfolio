@@ -9,14 +9,44 @@ section {
     justify-content: center;
     align-items: center;
     font-family: "Karla-Regular";
+
+    @media (max-width: 900px) {
+        height: auto;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
 }
 
 .about-me-wrapper {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     height: 720px;
     display: flex;
+    justify-content: center;
     gap: 120px;
     cursor: default;
+
+    @media (max-width: 1250px) {
+        gap: 100px;
+    }
+
+    @media (max-width: 1150px) {
+        gap: 85px;
+    }
+
+    @media (max-width: 1050px) {
+        gap: 70px;
+    }
+
+    @media (max-width: 970px) {
+        gap: 55px;
+    }
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
 
     .image-container {
         width: 568px;
@@ -24,6 +54,51 @@ section {
         /* mit neuem Bild von mir, muss ausgegraut werden
             object-fit: cover; etc. evtl? */
         position: relative;
+
+        @media (max-width: 1250px) {
+            width: 500px;
+            height: 500px;
+        }
+
+        @media (max-width: 1150px) {
+            width: 470px;
+            height: 470px;
+        }
+
+        @media (max-width: 1050px) {
+            width: 440px;
+            height: 440px;
+        }
+
+        @media (max-width: 970px) {
+            width: 410px;
+            height: 410px;
+        }
+
+        @media (max-width: 900px) {
+            width: 450px;
+            height: 450px;
+        }
+
+        @media (max-width: 500px) {
+            width: 400px;
+            height: 400px;
+        }
+
+        @media (max-width: 420px) {
+            width: 350px;
+            height: 350px;
+        }
+
+        @media (max-width: 370px) {
+            width: 310px;
+            height: 310px;
+        }
+
+        @media (max-width: 340px) {
+            width: 280px;
+            height: 280px;
+        }
         
         >img {
             height: 100%;
@@ -50,16 +125,7 @@ section {
         &:hover::before {
             opacity: 1;
         }
-        // &:hover {
-        //     background-image: url("../../../assets/img/about_me_hover.png");
-        //     position: absolute;
-        //     top: 24px;
-        //     left: 24px;
-        // } //! Fix, nur eine grobe idee 
     }
-
-
-    
 
     .text-container {
         display: flex;
@@ -87,6 +153,42 @@ section {
             border-radius: 30px;
             gap: 24px;
             padding: 24px;
+
+            @media (max-width: 1250px) {
+                max-width: 500px;
+            }
+
+            @media (max-width: 1150px) {
+                max-width: 470px;
+            }
+    
+            @media (max-width: 1050px) {
+                max-width: 440px;
+            }
+    
+            @media (max-width: 970px) {
+                max-width: 410px;
+            }
+
+            @media (max-width: 900px) {
+                max-width: 450px;
+            }
+
+            @media (max-width: 500px) {
+                max-width: 400px;
+            }
+    
+            @media (max-width: 420px) {
+                max-width: 350px;
+            }
+    
+            @media (max-width: 370px) {
+                max-width: 310px;
+            }
+    
+            @media (max-width: 340px) {
+                max-width: 280px;
+            }
 
             .about-me-headline-container {
 
@@ -156,5 +258,3 @@ section {
         }
     }
 }
-
-

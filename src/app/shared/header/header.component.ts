@@ -34,6 +34,5 @@ export class HeaderComponent {
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
-    console.log(this.isMobileMenuOpen);
   }
 }

@@ -141,7 +141,7 @@ export class ContactMeComponent {
     message: ''
   }
 
-  mailTest = true; //! Zum testen muss true sein
+  mailTest = false; //! Zum testen muss true sein
 
   post = {
     endPoint: 'sendMail.php',
