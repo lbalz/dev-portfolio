@@ -235,6 +235,21 @@ section {
                                 border-radius: 24px;
                                 cursor: pointer;
                             }
+
+                            .disabled-btn {
+                                &:hover {
+                                    border-color: red;
+                                    color: red;
+                                    cursor: not-allowed;
+                                }
+                            }
+
+                            .activated-btn {
+                                &:hover {
+                                    border-color: $primary-color;
+                                    color: $primary-color;
+                                }
+                            }
                         }
                     }
                 }

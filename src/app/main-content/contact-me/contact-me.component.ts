@@ -115,7 +115,14 @@ export class ContactMeComponent {
 
   updateSubmitBtn() {
     const sendMailButton = document.querySelector('.submit-btn') as HTMLButtonElement;
-    sendMailButton.disabled = !this.formIsValid();
+    // sendMailButton.disabled = !this.formIsValid();
+    if (!this.formIsValid()) {
+      sendMailButton.classList.add('disabled-btn');
+      sendMailButton.classList.remove('activated-btn');
+    } else {
+      sendMailButton.classList.remove('disabled-btn');
+      sendMailButton.classList.add('activated-btn');
+    }
   }
 
   /*
