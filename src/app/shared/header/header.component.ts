@@ -15,12 +15,8 @@ import { TranslateLanguageService } from '../../translate-language.service';
 })
 export class HeaderComponent {
   logoImgSrc: string = './assets/img/logo_filled.png';
-
   isEnglish: boolean = false;
-
-  toggleLanguageBtnStyle(language: 'EN' | 'DE') {
-    this.isEnglish = language === 'EN';
-  }
+  isMobileMenuOpen: boolean = false;
 
   constructor(private languageService: TranslateLanguageService) { }
 
@@ -29,5 +25,13 @@ export class HeaderComponent {
   toggleLanguage(): void {
     this.isEnglish = !this.isEnglish;
     this.languageService.changeIsEnglish(this.isEnglish);
+  }
+
+  toggleLanguageBtnStyle(language: 'EN' | 'DE') {
+    this.isEnglish = language === 'EN';
+  }
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 }

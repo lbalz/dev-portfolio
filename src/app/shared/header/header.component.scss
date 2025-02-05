@@ -1,4 +1,5 @@
 $primary-color: #3DCFB6;
+$secondary-color: #FFFFFF;
 
 header {
     width: 100%;
@@ -56,7 +57,7 @@ header {
     }
 }
 
-.slide_toggle_container {
+.slide-toggle-container {
     width: 84px;
     height: 28px;
     display: flex;
@@ -112,7 +113,7 @@ header {
     }
 }
 
-.slide_toggle_container {
+.slide-toggle-container {
     &.en-selected {
         .slide-toggle-en {
             background-color: $primary-color;
@@ -175,4 +176,24 @@ nav div a::after {
 
 nav div a:hover::after {
     opacity: 1;
+}
+
+.burger-menu {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    >span {
+        width: 100%;
+        height: 3px;
+        background-color: $secondary-color;
+        transition: all 0.3s ease;
+    }
+}
+
+.mobile-menu-wrapper {
+    display: none;
 }

@@ -1,8 +1,9 @@
 <header>
     <div class="content-wrapper">
+        <!-- Desktop Navigation -->
         <div class="menu-wrapper">
             <div
-            class="slide_toggle_container" 
+            class="slide-toggle-container" 
             [ngClass]="{'en-selected': !isEnglish, 'de-selected': isEnglish}">
                 <div 
                 class="slide-toggle-de" 
@@ -31,9 +32,9 @@
                     <a href="#portfolioProjects">{{ 'app.header.projects' | translate }}</a>
                 </div>
             </nav>
-
         </div>
 
+        <!-- Logo -->
         <div class="logo-wrapper">
             <a href="#landingPage">
                 <img 
@@ -42,6 +43,18 @@
                 (mouseout)="logoImgSrc = './assets/img/logo_filled.png'"
                 class="logo" alt="logo">
             </a>
+        </div>
+
+        <!-- Burger Menu -->
+        <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Mobile Overlay Navigation -->
+        <div class="mobile-menu-wrapper">
+
         </div>
     </div>
 </header>
