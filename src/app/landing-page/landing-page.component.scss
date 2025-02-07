@@ -308,7 +308,7 @@ section {
     height: 64px;
     background-color: #FFFFFF1F;
     backdrop-filter: blur(5.3px);
-    overflow: clip;
+    overflow: hidden;
     position: absolute;
     bottom: 63px;
     display: flex;
@@ -326,6 +326,7 @@ section {
 
     @media (max-width: 500px) {
         height: 48px;
+        width: 90%;
     }
 }
 

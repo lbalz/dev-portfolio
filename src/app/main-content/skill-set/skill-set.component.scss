@@ -21,7 +21,8 @@ section {
 }
 
 .left-border-shadow {
-    width: 540px;
+    width: 100%;
+    max-width: 540px;
     height: 540px;
     position: absolute;
     top: 40px;
