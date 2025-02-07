@@ -4,6 +4,10 @@ $secondary-color: #FFFFFF;
 .primary-color {
     color: $primary-color;
     font-size: 24px;
+
+    @media (max-width: 900px) {
+        font-size: 20px;
+    }
 }
 
 .phone {
@@ -24,9 +28,11 @@ section {
     background-color: #1C1C1C;
     color: $secondary-color;
     font-family: "Karla-Regular";
+    padding: 32px;
 
     .legal-notice {
-        width: 1440px;
+        width: 100%;
+        max-width: 1440px;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -66,14 +72,30 @@ section {
             gap: 8px;
             font-size: 20px;
 
+            @media (max-width: 900px) {
+                font-size: 16px;
+            }
+
             .legal-notice-info-top-container {
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
 
+                @media (max-width: 500px) {
+                    gap: 12px;
+                }
+
                 >h1 {
                     font-size: 80px;
                     color: $primary-color;
+
+                    @media (max-width: 900px) {
+                        font-size: 64px;
+                    }
+
+                    @media (max-width: 500px) {
+                        font-size: 48px;
+                    }
                 }
 
                 >div {
@@ -106,6 +128,11 @@ section {
             gap: 24px;
             font-size: 20px;
             text-align: justify;
+
+            @media (max-width: 900px) {
+                font-size: 16px;
+                gap: 12px;
+            }
             
             .liability-for-content-container, 
             .liability-for-links-contianer, 
@@ -117,6 +144,10 @@ section {
 
         .legal-notice-source-container {
             font-size: 20px;
+
+            @media (max-width: 900px) {
+                font-size: 16px;
+            }
             
             >a {
                 text-decoration: none;
