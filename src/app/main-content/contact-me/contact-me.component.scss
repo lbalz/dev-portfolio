@@ -9,6 +9,7 @@ section {
     justify-content: center;
     align-items: center;
     position: relative;
+    // padding: 32px;
 
     .contact-wrapper {
         width: 100%;
@@ -17,25 +18,62 @@ section {
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: 1000px) {
+            flex-direction: column;
+            gap: 40px;
+            height: auto;
+        }
+
+        @media (max-width: 660px) {
+            gap: 20px;
+        }
+
         .left-wrapper {
-            width: 560px;
+            width: 100%;
+            max-width: 560px;
             height: auto;
             display: flex;
             flex-direction: column;
             gap: 40px;
+            padding: 16px;
+
+            @media (max-width: 1200px) {
+                gap: 20px;
+            }
+
+            @media (max-width: 1000px) {
+                max-width: 1000px;
+            }
+
+            @media (max-width: 660px) {
+                gap: 10px;
+            }
 
             .title-container {
-                width: 560px;
+                width: 100%;
+                max-width: 560px;
                 height: auto;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 gap: 20px;
 
+                @media (max-width: 1000px) {
+                    max-width: 1000px;
+                }
+
+                @media (max-width: 660px) {
+                    gap: 10px;
+                }
+
                 .title-contact-me {
                     font-size: 24px;
                     color: $primary-color;
                     font-family: "Karla-Light";
+
+                    @media (max-width: 660px) {
+                        font-size: 20px;
+                    }
                 }
 
                 .title-work-together {
@@ -43,27 +81,48 @@ section {
                     color: $primary-color;
                     font-family: "FiraCode-Bold";
                     font-weight: bold;
+
+                    @media (max-width: 1200px) {
+                        font-size: 48px;
+                    }
+
+                    @media (max-width: 660px) {
+                        font-size: 36px;
+                    }
                 }
             }
 
             .got-a-problem-container {
-                width: 560px;
+                width: 100%;
+                max-width: 560px;
                 height: auto;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 gap: 16px;
 
+                @media (max-width: 1000px) {
+                    max-width: 1000px;
+                }
+
                 .got-a-problem {
                     font-size: 24px;
                     color: $primary-color;
                     font-family: "FiraCode-Bold";
+
+                    @media (max-width: 660px) {
+                        font-size: 20px;
+                    }
                 }
 
                 .contact-through-form, .need-dev, .lets-talk {
                     font-size: 16px;
                     color: $secondary-color;
                     font-family: "Karla-Light";
+
+                    @media (max-width: 660px) {
+                        font-size: 14px;
+                    }
                 }
 
                 .contact-through-form {
@@ -83,20 +142,36 @@ section {
         }
 
         .right-wrapper {
-            width: 600px;
+            width: 100%;
+            max-width: 600px;
             height: 560px;
             display: flex;
             justify-content: center;
             align-items: center;
-            // background-color: #fff;
+            padding: 16px;
+
+            @media (max-width: 1000px) {
+                max-width: 1000px;
+            }
+
+            @media (max-width: 460px) {
+                margin-bottom: 48px;
+            }
 
             .contact-form-container {
+                width: 100%;
+
                 >form {
                     display: flex;
                     flex-direction: column;
-                    width: 600px;
+                    width: 100%;
+                    max-width: 600px;
                     height: 560px;
                     gap: 12px;
+
+                    @media (max-width: 1000px) {
+                        max-width: 1000px;
+                    }
 
                     .contact-form-top-wrapper {
                         width: 100%;
@@ -123,6 +198,10 @@ section {
                                 font-size: 24px;
                                 color: $primary-color;
                                 font-family: "FiraCode-Medium";
+
+                                @media (max-width: 660px) {
+                                    font-size: 20px;
+                                }
                             }
 
                             .your-name-input, .your-email-input, .how-can-i-help-input {
@@ -132,6 +211,10 @@ section {
                                 outline: none;
                                 border: none;
                                 background-color: transparent;
+
+                                @media (max-width: 660px) {
+                                    font-size: 16px;
+                                }
 
                                 &::placeholder {
                                     color: #FFFFFFCC;
@@ -143,6 +226,14 @@ section {
                                 max-width: 568px;
                                 min-height: 48px;
                                 max-height: 200px;
+
+                                @media (max-width: 1000px) {
+                                    max-width: 1000px;
+                                }
+
+                                @media (max-width: 660px) {
+                                    min-width: 0;
+                                }
                             }
 
                             .your-name-required, .your-email-required, .how-can-i-help-required {
@@ -150,6 +241,10 @@ section {
                                 font-family: "Karla-Light";
                                 color: #EC7B7BCC;
                                 display: none;
+
+                                @media (max-width: 660px) {
+                                    font-size: 16px;
+                                }
                             }
                         }
 
@@ -196,6 +291,10 @@ section {
                                         font-family: "Karla-Light";
                                         font-size: 15px;
                                         color: $secondary-color;
+
+                                        @media (max-width: 660px) {
+                                            font-size: 13px;
+                                        }
                                     }
     
                                     .privacy-policy {
@@ -204,6 +303,10 @@ section {
                                         color: $primary-color;
                                         text-decoration: none;
                                         cursor: pointer;
+
+                                        @media (max-width: 660px) {
+                                            font-size: 13px;
+                                        }
 
                                         &:hover {
                                             color: $secondary-color;
@@ -217,6 +320,10 @@ section {
                                 font-size: 14px;
                                 color: #EC7B7B;
                                 display: none;
+
+                                @media (max-width: 660px) {
+                                    font-size: 12px;
+                                }
                             }
                         }
 
@@ -237,6 +344,10 @@ section {
                                 border: 1px solid #FFFFFF80;
                                 border-radius: 24px;
                                 cursor: pointer;
+
+                                @media (max-width: 660px) {
+                                    font-size: 16px;
+                                }
                             }
 
                             .disabled-btn {
