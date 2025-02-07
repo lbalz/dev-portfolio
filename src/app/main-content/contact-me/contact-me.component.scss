@@ -2,7 +2,8 @@ $primary-color: #3DCFB6;
 $secondary-color: #FFFFFF;
 
 section {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 900px;
     display: flex;
     justify-content: center;
@@ -10,7 +11,8 @@ section {
     position: relative;
 
     .contact-wrapper {
-        width: 1248px;
+        width: 100%;
+        max-width: 1248px;
         height: 560px;
         display: flex;
         justify-content: space-between;

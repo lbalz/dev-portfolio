@@ -331,7 +331,8 @@ section {
     align-items: center;
 
     .single-project-overlay-wrapper {
-        width: 1248px;
+        width: 100%;
+        max-width: 1248px;
         height: 656px;
         border-radius: 24px;
         border: 1px solid $primary-color;
@@ -340,18 +341,99 @@ section {
         justify-content: center;
         align-items: center;
 
+        @media (max-width: 1300px) {
+            max-width: 1148px;
+        }
+
+        @media (max-width: 1200px) {
+            max-width: 1048px;
+        }
+
+        @media (max-width: 1100px) {
+            max-width: 948px;
+        }
+
+        @media (max-width: 1000px) {
+            max-width: 848px;
+        }
+
+        @media (max-width: 900px) {
+            max-width: 748px;
+            height: auto;
+        }
+
+        @media (max-width: 800px) {
+            max-width: 648px;
+        }
+
+        @media (max-width: 700px) {
+            max-width: 548px;
+        }
+
+        @media (max-width: 600px) {
+            max-width: 448px;
+        }
+
+        @media (max-width: 500px) {
+            max-width: 348px;
+        }
+
+        @media (max-width: 400px) {
+            max-width: 300px;
+        }
+
         .single-project-overlay-container {
             display: flex;
             justify-content: space-around;
             align-items: center;
             gap: 108px;
 
+            @media (max-width: 1300px) {
+                gap: 84px;
+            }
+
+            @media (max-width: 1200px) {
+                gap: 42px;
+            }
+
+            @media (max-width: 1100px) {
+                gap: 26px;
+                padding: 16px;
+            }
+
+            @media (max-width: 900px) {
+                flex-direction: column-reverse;
+            }
+
+            @media (max-width: 600px) {
+                gap: 16px;
+            }
+
+            @media (max-width: 500px) {
+                gap: 8px;
+                height: 525px;
+            }
+
+            @media (max-width: 400px) {
+                height: 558px;
+            }
+
             .overlay-left-wrapper {
-                width: 500px;
+                width: 100%;
+                max-width: 500px;
                 height: auto;
                 display: flex;
                 flex-direction: column;
                 gap: 40px;
+
+                @media (max-width: 900px) {
+                    max-width: 100%;
+                    gap: 20px;
+                }
+
+                @media (max-width: 600px) {
+                    gap: 8px;
+                }
 
                 .overlay-left-wrapper-top-container {
                     display: flex;
@@ -363,12 +445,44 @@ section {
                         font-weight: bold;
                         font-size: 128px;
                         color: $primary-color;
+
+                        @media (max-width: 1100px) {
+                            font-size: 96px;
+                        }
+
+                        @media (max-width: 900px) {
+                            font-size: 64px;
+                        }
+
+                        @media (max-width: 600px) {
+                            font-size: 48px;
+                        }
+
+                        @media (max-width: 500px) {
+                            font-size: 40px;
+                        }
                     }
 
                     .overlay-project-name {
                         font-family: "FiraCode-Bold";
                         font-size: 64px;
                         color: $secondary-color;
+
+                        @media (max-width: 1100px) {
+                            font-size: 56px;
+                        }
+
+                        @media (max-width: 900px) {
+                            font-size: 48px;
+                        }
+
+                        @media (max-width: 600px) {
+                            font-size: 40px;
+                        }
+
+                        @media (max-width: 500px) {
+                            font-size: 32px;
+                        }
                     }
                 }
 
@@ -378,10 +492,30 @@ section {
                     justify-content: space-between;
                     gap: 24px;
 
+                    @media (max-width: 600px) {
+                        gap: 12px;
+                    }
+
+                    @media (max-width: 500px) {
+                        gap: 8px;
+                    }
+
                     .overlay-project-about {
                         font-family: "FiraCode-Bold";
                         font-size: 24px;
                         color: $primary-color;
+
+                        @media (max-width: 900px) {
+                            font-size: 20px;
+                        }
+
+                        @media (max-width: 600px) {
+                            font-size: 18px;
+                        }
+
+                        @media (max-width: 500px) {
+                            font-size: 16px;
+                        }
                     }
 
                     .overlay-project-info-text {
@@ -389,11 +523,20 @@ section {
                         font-size: 18px;
                         color: $secondary-color;
                         text-align: justify;
+
+                        @media (max-width: 900px) {
+                            font-size: 16px;
+                        }
+
+                        @media (max-width: 600px) {
+                            font-size: 14px;
+                        }
                     }
 
                     .overlay-project-skills {
                         display: flex;
                         align-items: center;
+                        flex-wrap: wrap;
                         gap: 16px;
 
                         .overlay-stack-container {
@@ -405,6 +548,11 @@ section {
                             >img {
                                 width: 24px;
                                 height: 24px;
+
+                                @media (max-width: 600px) {
+                                    width: 20px;
+                                    height: 20px;
+                                }
                             }
     
                             >span {
@@ -421,6 +569,16 @@ section {
                     align-items: center;
                     gap: 24px;
 
+                    @media (max-width: 600px) {
+                        gap: 12px;
+                    }
+
+                    @media (max-width: 500px) {
+                        gap: 8px;
+                        flex-direction: column;
+                        align-items: start;
+                    }
+
                     .overlay-github-button, .overlay-live-test-button {
                         width: 132px;
                         height: 48px;
@@ -435,6 +593,18 @@ section {
                         border: 1px solid $secondary-color;
                         border-radius: 24px;
                         transition: color 0.2s ease, border-color 0.2s ease;
+
+                        @media (max-width: 600px) {
+                            width: 120px;
+                            height: 40px;
+                            font-size: 16px;
+                        }
+
+                        @media (max-width: 500px) {
+                            width: 100px;
+                            height: 32px;
+                            font-size: 14px;
+                        }
 
                         img {
                             transition: transform 0.2s ease;
@@ -453,16 +623,57 @@ section {
             }
 
             .overlay-right-wrapper {
-                width: 520px;
+                width: 100%;
+                max-width: 520px;
                 height: auto;
                 display: flex;
                 flex-direction: column;
                 align-items: end;
                 justify-content: space-between;
                 gap: 40px;
+                position: relative;
+
+                @media (max-width: 900px) {
+                    max-width: 100%;
+                    align-items: center;
+                }
+
+                @media (max-width: 500px) {
+                    align-items: start;
+                }
 
                 .overlay-close-btn-container {
+                    position: absolute;
+                    top: -96px;
+                    right: -16px;
                     cursor: pointer;
+
+                    @media (max-width: 1300px) {
+                        right: 0;
+                    }
+
+                    @media (max-width: 1200px) {
+                        right: 16px;
+                        top: -132px;
+                    }
+
+                    @media (max-width: 900px) {
+                        right: 0;
+                        top: 0;
+                    }
+
+                    @media (max-width: 600px) {
+                        right: -12px;
+                    }
+
+                    @media (max-width: 500px) {
+                        top: -12px;
+                    }
+
+                    @media (max-width: 400px) {
+                        top: -22px;
+                        right: -8px;
+                    }
                 }
 
                 .overlay-img-container {
@@ -472,6 +683,35 @@ section {
                         width: 520px;
                         height: 370px;
                         border-radius: 24px;
+
+                        @media (max-width: 1200px) {
+                            width: 480px;
+                            height: 320px;
+                        }
+
+                        @media (max-width: 1100px) {
+                            width: 430px;
+                            height: 270px;
+                        }
+
+                        @media (max-width: 700px) {
+                            width: 380px;
+                            height: 220px;
+                        }
+
+                        @media (max-width: 600px) {
+                            width: 330px;
+                            height: 190px;
+                        }
+
+                        @media (max-width: 500px) {
+                            width: 280px;
+                            height: 160px;
+                        }
+
+                        @media (max-width: 400px) {
+                            margin-top: 16px;
+                        }
                     }
                 }
 
@@ -480,6 +720,35 @@ section {
                     align-items: center;
                     gap: 8px;
                     cursor: pointer;
+                    position: absolute;
+                    bottom: -96px;
+                    right: -16px;
+
+                    @media (max-width: 1300px) {
+                        right: 0;
+                    }
+
+                    @media (max-width: 1200px) {
+                        right: 16px;
+                        bottom: -132px;
+                    }
+
+                    @media (max-width: 900px) {
+                        right: 0;
+                        bottom: -385px;
+                    }
+
+                    @media (max-width: 600px) {
+                        bottom: -280px;
+                    }
+
+                    @media (max-width: 500px) {
+                        bottom: -320px;
+                    }
+
+                    @media (max-width: 400px) {
+                        bottom: -348px;
+                    }
 
                     &:hover {
                         .next-project-text {
@@ -495,6 +764,10 @@ section {
                         font-family: "Karla-Light";
                         font-size: 18px;
                         color: $primary-color;
+
+                        @media (max-width: 600px) {
+                            font-size: 16px;
+                        }
                     }
 
                     .next-project-arrow {

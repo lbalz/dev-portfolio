@@ -2,7 +2,8 @@ $primary-color: #3DCFB6;
 $secondary-color: #FFFFFF;
 
 section {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 720px;
     display: flex;
     align-items: center;

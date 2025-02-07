@@ -3,7 +3,8 @@ $secondary-color: #FFFFFF;
 $secondary-color-hover: #FFFFFFCC;
 
 section {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 100vh;
     display: flex;
     justify-content: center;

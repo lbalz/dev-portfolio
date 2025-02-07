@@ -18,7 +18,8 @@ header {
 }
 
 .content-wrapper {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 96px;
     display: flex;
     justify-content: space-between;

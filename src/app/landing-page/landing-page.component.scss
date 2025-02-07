@@ -310,10 +310,15 @@ section {
     backdrop-filter: blur(5.3px);
     overflow: clip;
     position: absolute;
-    bottom: 38px;
+    bottom: 63px;
     display: flex;
     align-items: center;
-    transform: rotate(357deg);
+    transform: rotate(355deg);
+
+    // @media (max-width: 1278px) {
+    //     transform: rotate();
+    //     bottom: 63px;
+    // }
 
     @media (max-width: 800px) {
         height: 56px;
