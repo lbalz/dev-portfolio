@@ -1,9 +1,8 @@
 $primary-color: #3DCFB6;
 $secondary-color: #FFFFFF;
 
-section {
+#footer {
     width: 100%;
-    max-width: 1440px;
     height: 140px;
     display: flex;
     justify-content: center;
@@ -11,11 +10,46 @@ section {
     background-color: #1C1C1C;
 
     .footer-wrapper {
-        width: 1248px;
+        width: 100%;
+        max-width: 1440px;
         height: 132px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-left: 96px;
+        padding-right: 96px;
+        position: relative;
+
+        @media (max-width: 1200px) {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+    
+        @media (max-width: 1100px) {
+            padding-left: 64px;
+            padding-right: 64px;
+        }
+    
+        @media (max-width: 900px) {
+            padding-left: 56px;
+            padding-right: 56px;
+        }
+    
+        @media (max-width: 660px) {
+            padding-left: 48px;
+            padding-right: 48px;
+            margin-bottom: 96px;
+        }
+    
+        @media (max-width: 500px) {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    
+        @media (max-width: 360px) {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
 
         .left-wrapper {
             width: 140px;
@@ -40,13 +74,17 @@ section {
             }
         }
 
-        .middle-wrapper {
-            >span {
-                font-family: "FiraCode-Light";
-                font-size: 18px;
-                color: $primary-color;
-            }
-        }
+        // .middle-wrapper {
+        //     >span {
+        //         font-family: "FiraCode-Light";
+        //         font-size: 18px;
+        //         color: $primary-color;
+        //     }
+
+        //     @media (max-width: 660px) {
+        //         margin-top: 180px;
+        //     }
+        // }
 
         .right-wrapper {
             display: flex;
@@ -63,6 +101,21 @@ section {
                 &:hover {
                     color: $primary-color;
                 }
+            }
+        }
+
+        >span {
+            position: absolute;
+            left: 50%;
+            bottom: 32px;
+            transform: translate(-50%);
+            font-family: "FiraCode-Light";
+            font-size: 18px;
+            color: $primary-color;
+
+            @media (max-width: 660px) {
+                bottom: -40px;
+                font-size: 15px;
             }
         }
     }

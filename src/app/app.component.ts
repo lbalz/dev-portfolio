@@ -16,7 +16,8 @@ import { PrivacyPolicyComponent } from "./privacy-policy/privacy-policy.componen
   imports: [
     CommonModule,
     RouterOutlet,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
