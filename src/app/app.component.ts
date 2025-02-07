@@ -35,7 +35,34 @@ export class AppComponent {
     this.translate.use('en');
   }
 
-  changeLanguage(lang: string) {
-    this.translate.use(lang);
+  ngAfterViewInit(): void {
+    this.setupScrollListeners();
   }
+
+  setupScrollListeners(): void { 
+    const headerOffset = 96;
+
+    const scollToSection = (event: Event, sectionId: string): void => {
+      event.preventDefault();
+      const target = document.querySelector(sectionId);
+
+      if (target) {
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    };
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (this: HTMLAnchorElement,event: Event) {
+        scollToSection(event, this.getAttribute('href')!);
+      });
+    });
+  }
+
+  
 }
