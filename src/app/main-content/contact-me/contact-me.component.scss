@@ -262,7 +262,7 @@ section {
 .pop-up-msg-box {
     width: 400px;
     height: 200px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -276,10 +276,10 @@ section {
     position: absolute;
     top: 270px;
     right: 200px;
-    opacity: 0;
 
     &.animate {
         animation: popUpAnimation 3s ease-out forwards;
+        display: flex;
     }
 }
 
