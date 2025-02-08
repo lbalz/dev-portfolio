@@ -74,6 +74,14 @@ section {
                     @media (max-width: 660px) {
                         font-size: 20px;
                     }
+
+                    @media (max-width: 460px) {
+                        font-size: 18px;
+                    }
+
+                    @media (max-width: 360px) {
+                        font-size: 16px;
+                    }
                 }
 
                 .title-work-together {
@@ -88,6 +96,14 @@ section {
 
                     @media (max-width: 660px) {
                         font-size: 36px;
+                    }
+
+                    @media (max-width: 460px) {
+                        font-size: 32px;
+                    }
+
+                    @media (max-width: 360px) {
+                        font-size: 28px;
                     }
                 }
             }
@@ -113,6 +129,14 @@ section {
                     @media (max-width: 660px) {
                         font-size: 20px;
                     }
+
+                    @media (max-width: 460px) {
+                        font-size: 18px;
+                    }
+
+                    @media (max-width: 360px) {
+                        font-size: 16px;
+                    }
                 }
 
                 .contact-through-form, .need-dev, .lets-talk {
@@ -122,6 +146,10 @@ section {
 
                     @media (max-width: 660px) {
                         font-size: 14px;
+                    }
+
+                    @media (max-width: 460px) {
+                        font-size: 12px;
                     }
                 }
 
@@ -202,6 +230,14 @@ section {
                                 @media (max-width: 660px) {
                                     font-size: 20px;
                                 }
+
+                                @media (max-width: 460px) {
+                                    font-size: 18px;
+                                }
+
+                                @media (max-width: 360px) {
+                                    font-size: 16px;
+                                }
                             }
 
                             .your-name-input, .your-email-input, .how-can-i-help-input {
@@ -214,6 +250,10 @@ section {
 
                                 @media (max-width: 660px) {
                                     font-size: 16px;
+                                }
+
+                                @media (max-width: 460px) {
+                                    font-size: 14px;
                                 }
 
                                 &::placeholder {
@@ -244,6 +284,10 @@ section {
 
                                 @media (max-width: 660px) {
                                     font-size: 16px;
+                                }
+
+                                @media (max-width: 460px) {
+                                    font-size: 14px;
                                 }
                             }
                         }
