@@ -30,6 +30,10 @@ html {
     --mouse-y: 0px;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 body::after {
     content: '';
     position: fixed;

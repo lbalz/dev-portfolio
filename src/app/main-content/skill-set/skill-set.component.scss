@@ -308,7 +308,8 @@ section {
             height: 112px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            justify-content: space-around;
+            align-items: center;
             background-color: $secondary-color;
             position: absolute;
             bottom: 112px;
