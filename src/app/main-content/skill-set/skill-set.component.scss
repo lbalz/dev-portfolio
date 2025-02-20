@@ -88,14 +88,17 @@ section {
         @media (max-width: 580px) {
             width: 440px;
             padding: 8px;
+            gap: 32px;
         }
 
         @media (max-width: 470px) {
             width: 370px;
+            gap: 24px;
         }
 
         @media (max-width: 380px) {
             width: 300px;
+            gap: 16px;
         }
 
         .skill-set-headline {
@@ -121,6 +124,18 @@ section {
             gap: 32px;
             color: $secondary-color;
             font-family: "Karla-Light";
+
+            @media(max-width: 580px) {
+                gap: 24px;
+            }
+
+            @media(max-width: 470px) {
+                gap: 16px;
+            }
+
+            @media(max-width: 380px) {
+                gap: 12px;
+            }
 
             .skill-text-container {
                 text-align: justify;

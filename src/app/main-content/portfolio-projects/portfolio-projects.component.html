@@ -21,10 +21,7 @@
                     <div class="title-container">
                         <h4 class="project-title"> {{ project.projectName }} </h4>
 
-                        @if(currentHoveredProject === project.projectName) {
-                        <img class="arrow" src="./assets/icon/projects_arrow.png">
-                        }
-                        <!--! Overlay ist auch nicht richtig -->
+                        <img (click)="toggleOverlay(true)" class="arrow" src="./assets/icon/projects_arrow.png">
                     </div>
 
                     <div class="stack">
