@@ -37,16 +37,16 @@ export class PortfolioProjectsComponent {
         techStack: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
         imageUrl: './assets/img/portfolio-projects/join_placeholder.jpg',
         githubUrl: 'https://github.com/lbalz/Join-Kanban-Board',
-        liveTestUrl: '',
+        liveTestUrl: 'https://join.lukas-balz.de/',
         infoTranslationKey: 'app.portfolio_projects.overlay.info.join_project'
       },
       {
         id: 2,
         projectName: 'El Pollo Loco',
         techStack: ['HTML', 'CSS', 'JavaScript'],
-        imageUrl: './assets/img/portfolio-projects/pollo_loco_placeholder.jpg',
+        imageUrl: './assets/img/portfolio-projects/pollo_loco.png',
         githubUrl: 'https://github.com/lbalz/El-Pollo-Loco',
-        liveTestUrl: '',
+        liveTestUrl: 'https://pollo-loco.lukas-balz.de/',
         infoTranslationKey: 'app.portfolio_projects.overlay.info.game_project'
       }
     ];
@@ -120,31 +120,6 @@ export class PortfolioProjectsComponent {
         this.selectedProject = this.getNextProject();
       }
     }
-
-
-  // portfolioProjects: PortfolioProject[] = [
-  //   {
-  //     projectName: 'Join',
-  //     projectImgPath: './assets/img/portfolio-projects/join_placeholder.png',
-  //     techStack: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
-  //     techStackString: ""
-  //   },
-  //   {
-  //     projectName: 'El Pollo Loco',
-  //     projectImgPath: './assets/img/portfolio-projects/el_pollo_loco_placeholder.png',
-  //     techStack: ['HTML', 'CSS', 'JavaScript'],
-  //     techStackString: ""
-  //   },
-  //   // {
-  //   //   projectName: 'DABubble',
-  //   //   projectImgPath: './assets/img/projects/da_bubble.png',
-  //   //   techStack: ['Angular', 'TypeScript', 'Firebase']
-  //   // }
-  // ];  
-
-    
-
-
 
 
 
