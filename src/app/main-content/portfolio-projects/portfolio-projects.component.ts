@@ -48,6 +48,15 @@ export class PortfolioProjectsComponent {
         githubUrl: 'https://github.com/lbalz/El-Pollo-Loco',
         liveTestUrl: 'https://pollo-loco.lukas-balz.de/',
         infoTranslationKey: 'app.portfolio_projects.overlay.info.game_project'
+      },
+      {
+        id: 3,
+        projectName: 'Pokedex',
+        techStack: ['HTML', 'CSS', 'JavaScript', 'REST-API'],
+        imageUrl: './assets/img/portfolio-projects/pokedex.png',
+        githubUrl: 'https://github.com/lbalz/Pokedex',
+        liveTestUrl: 'https://pokedex.lukas-balz.de',
+        infoTranslationKey: 'app.portfolio_projects.overlay.info.pokedex'
       }
     ];
 
@@ -84,6 +93,20 @@ export class PortfolioProjectsComponent {
             stack: 'JavaScript',
             imgPath: './assets/icon/overlay/skills/overlay_js.png'
           },
+        ],
+        'Pokedex': [
+          {
+            stack: 'HTML',
+            imgPath: './assets/icon/overlay/skills/overlay_html.png'
+          },
+          {
+            stack: 'CSS',
+            imgPath: './assets/icon/overlay/skills/overlay_css.png'
+          },
+          {
+            stack: 'JavaScript',
+            imgPath: './assets/icon/overlay/skills/overlay_js.png'
+          }
         ]
       };
 

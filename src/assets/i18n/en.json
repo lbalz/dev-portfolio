@@ -41,7 +41,8 @@
             "overlay": {
                 "info": {
                     "join_project": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-                    "game_project": "Jump, run and throw game based on object-oriented approach. Help pepe to find coins and tabasco salsa to fight against the crazy hen."
+                    "game_project": "Jump, run and throw game based on object-oriented approach. Help pepe to find coins and tabasco salsa to fight against the crazy hen.",
+                    "pokedex": "A lightweight web app that uses the PokeAPI to load and display a few Pokémon with their names, images, and basic info. It demonstrates basic API usage and dynamic content rendering."
                 },
                 "title": "What is this project about?",
                 "next_project": "Next project"
